@@ -1,0 +1,131 @@
+@import url(common.css);
+@import url(../fonts/SUIT-woff2/SUIT.css);
+
+@media screen and (max-width:767px) {
+  body {
+    font-family: 'SUIT-Regular';
+    position: relative;
+    background: url(../images/intro/login.png) no-repeat center center;
+    background-size: cover;
+    font-family: 'SUIT';
+  }
+  /* Login */
+  .bg-box {
+    width: 100%;
+    height: 88%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border-radius: 70px 0 0 0;
+    padding: 60px 20px 30px;
+    letter-spacing: -0.5;
+  }
+  .login-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+  }
+  .login-box h1 {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #191919;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  .input-id, .input-pw {
+    width: 300px;
+    height: 45px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    border-radius: 12px;
+    font-weight: 500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;              
+    position: relative;
+    padding: 0 45px;
+  }
+  input::placeholder {
+    font-size: 16px;
+    font-size: 1rem;
+    color: #767676;
+    line-height: 16px;
+  }
+  .material-symbols-outlined {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    z-index: 5;
+    color: #767676;
+  }
+  .login-btn {
+    width: 300px;
+    height: 60px;
+    font-weight: 600;
+    font-size: 20px;
+    font-size: 1.25rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: #132644;
+    border: 0;
+    cursor: pointer;
+  }
+  .find {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #767676;
+    margin-bottom: 80px;
+  }
+  .easy-login {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .easy-login span:nth-of-type(1),
+  .easy-login span:nth-of-type(3) {
+    width: 90px;
+    border: 1px solid #767676;
+  }
+  .easy-login span:nth-of-type(2) {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #767676;
+  }
+  .sns-icon {
+    width: 220px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .sns-icon li {
+    width: 46px;
+    height: 46px;
+  }
+  .sns-icon li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
