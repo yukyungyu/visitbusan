@@ -55,30 +55,4 @@ $(document).ready(function() {
       $('.tempInfo').append(`${$temp_min}&nbsp;/&nbsp;${$temp_min}`);
     }
   });
-
-  // const H_API_KEY = 'hQwtB9VEBeMV%2F5iReEPB0AyMgOs2b7tGUsJjFKFXTeNOOI50LzewXCPIxg8kWyej2sLwtY6q%2FpWfekf9cm%2B6hA%3D%3D';
-
-  // $.ajax({
-  //   crossOrigin: true,
-  //   url: `http://apis.data.go.kr/1360000/BeachInfoservice/getUltraSrtFcstBeach?&beachNum=1&base_date=20220622&base_time=1230`,
-  //   dataType: 'json',
-  //   contentType: "application/json; charset=utf-8",
-  //   type: 'POST',
-  //   data: {
-  //     serviceKey: H_API_KEY,
-  //   },
-  //   xhrFields: { 
-  //   	withCredentials: true // 클라이언트와 서버가 통신할때 쿠키와 같은 인증 정보 값을 공유하겠다는 설정
-  //   },
-  //   success:function(response, request) {
-  //     console.log(response);
-  //     console.log(request);
-  //     //let res = JSON.parese(response);
-  //     //console.log(res);
-  //   },
-  //   error:function(request, status, error){
-  //     alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-  //   }
-  // })
-  
 });
