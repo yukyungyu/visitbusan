@@ -108,6 +108,29 @@ body{
   color:#132644;
 }
 
+/* ______Footer______ */
+footer{
+  width:100%;
+  max-width:767px;
+  margin:auto;
+  background-color:#132644;
+  color:#eee;
+  font-family: 'SUIT-Regular';
+  font-size:0.625rem;
+  text-align:center;
+  line-height:1.875rem;
+  padding-bottom:4.500rem;
+}
+.foot_contents{padding:3.438rem 4.063rem;}
+.foot_menu,
+.foot_info{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+.foot_info em{font-style:normal;}
+
+
 
 /* 하단메뉴 */
 .dockbar{
