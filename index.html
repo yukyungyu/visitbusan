@@ -5,49 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>부산관광포털 비짓부산</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <!-- Header -->
-
+  <header><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></header>
   <!-- section start -->
   <!-- section: visual -->
-  <section id="visual">
-    <div></div>
+  <section id="main">
+    <img class="main-img" src="images/visual/main1.jpg" alt="메인비주얼">
+    <div class="main-text">
+      <span class="big-text">도심 속 작은 어촌마을<br>청사포와 미포</span>
+      <span class="samll-text">소박한 바다감성을 느낄 수 있는 곳</span>
+    </div>
   </section>
   <!-- section: category -->
   <section id="category">
-    <div class="cate-icon"></div>
+    <div class="cate-icon">
+      <a href="#none"><img src="images/icons/category/lighthouse.png" alt="아이콘_부산에가면"></a>
+      <span class="icon-title">부산에 가면</span>
+    </div>
+    <div class="cate-icon">
+      <a href="#none"><img src="images/icons/category/plane.png" alt="아이콘_추천여행"></a>
+        <span class="icon-title">추천여행</span></a>
+    </div>
+    <div class="cate-icon">
+      <a href="#none"><img src="images/icons/category/carrier.png" alt="아이콘_여행준비"></a>
+        <span class="icon-title">여행준비</span></a>
+    </div>
+    <div class="cate-icon">
+      <a href="#none"><img src="images/icons/category/info.png" alt="아이콘_유용한정보"></a>
+        <span class="icon-title">유용한 정보</span></a>
+    </div>
+    <div class="cate-icon">
+      <a href="#none"><img src="images/icons/category/calendar.png" alt="아이콘_행사달력"></a>
+        <span class="icon-title">행사달력</span></a>
+    </div>
   </section>
   <!-- section: weather -->
-  <div class="weather">
-    <div class="weather-1">
-      <div class="weather-2">
-        <div class="city"></div>
-        <div class="date"></div>
-        <div class="CurrIcon"></div>
-        <div class="weather_description"></div>
-      </div>
-      <div class="weather-3">
-        <div class="CurrTemp"></div>
-        <div class="tempInfo">
+  <section id="weather">
+    <div class="weather-box">
+      <div class="weather-1">
+        <div class="weather-2">
+          <div class="city"></div>
+          <div class="date"></div>
+          <div class="CurrIcon"></div>
+          <div class="weather_description"></div>
+        </div>
+        <div class="weather-3">
+          <div class="CurrTemp"></div>
+          <div class="tempInfo">
+          </div>
         </div>
       </div>
+      <div class="weather-4">
+        <div class="humidity"></div>
+        <div class="wind"></div>
+        <div class="cloud"></div>
+      </div>
     </div>
-    <div class="weather-4">
-      <div class="humidity"></div>
-      <div class="wind"></div>
-      <div class="cloud"></div>
-    </div>
-  </div>
+  </section>
   <!-- section: festival&event-->
   <section id="fes-event">
-    <span class="main-title">이 달의 축제&amp;이벤트</span><span>더보기 ></span>
+    <div class="section-header">
+      <span class="header-title">이 달의 축제&amp;이벤트</span>
+      <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
+    </div>
     <div></div>
   </section>
   <!-- section: attraction -->
   <section id="attraction">
-    <span class="main-title"><b>선선한 가을,</b><br>방문하기 좋은 명소</span><span>더보기 ></span>
+    <div class="section-header">
+      <span class="header-title"><b>선선한 가을,</b><br>방문하기 좋은 명소</span>
+      <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
+    </div>
     <div></div>
   </section>
   <!-- section: recommend -->
@@ -56,7 +88,10 @@
   </section>
   <!-- section: tourist info -->
   <section id="tourist-info">
-    <span class="main-title">관광안내소</span><span>더보기 ></span>
+    <div class="section-header">
+      <span class="header-title">관광안내소</span>
+      <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
+    </div>
     <div class="card"></div>
   </section>
   <!-- section: notice -->
@@ -66,14 +101,86 @@
   </section>
   <!-- section end -->
   
-  <!-- footer -->
+  <!-- Footer -->
+  <footer>
+    <div class="foot_contents">
+      <div class="foot_menu"><a href="#none">개인정보보호방침</a><a href="#none">저작권보호정책약관</a><a href="#none">장소 등록&dot;수정</a></div>
+      <span>Copyright Busan Metropolitan City. All rights reserved.</span>
+      <div class="foot_info"><em>관광문의 1330</em><em>민원대표전화 051-120</em><em>평일 08:30 - 18:30</em></div>
+    </div>
+  </footer>
+
   <!-- tabBar -->
-  <section>
-    <div></div>
-  </section>
+  <div class="dockbar">
+    <ul class="bottom_menu">
+      <li><a href="#none">
+        <img src="images/icons/home.png" alt="홈">
+        <span>홈</span>
+      </a></li>
+      <li><a href="#none">
+        <img src="images/icons/search.png" alt="검색">
+        <span>검색</span>
+      </a></li>
+      <li class="menu"><a href="#none">
+        <img src="images/icons/menu.png" alt="메뉴">
+        <span>메뉴</span>
+      </a></li>
+      <li><a href="#none">
+        <img src="images/icons/person.png" alt="마이홈">
+        <span>마이홈</span>
+      </a></li>
+    </ul>
+  </div>
+
+  <!-- menu -->
+  <div class="menu_in">
+    <div class="logo"><img src="images/logo/logo_3x.png" alt="로고"></div>
+    <div class="close"><span class="material-symbols-outlined">close</span></div>
+    <ul class="gnb">
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">부산에 가면</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
+        <ul class="sub">
+          <li><a href="#none">명소</a></li>
+          <li><a href="#none">축제</a></li>
+          <li><a href="#none">음식</a></li>
+        </ul>
+      </li>
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">추천여행</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
+        <ul class="sub">
+          <li><a href="#none">일정여행</a></li>
+          <li><a href="#none">테마여행</a></li>
+          <li><a href="#none">체험해양</a></li>
+        </ul>
+      </li>
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">여행준비</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
+        <ul class="sub">
+          <li><a href="#none">교통정보</a></li>
+          <li><a href="#none">응급의료서비스</a></li>
+          <li><a href="#none">문화관광해설사</a></li>
+        </ul>
+      </li>
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">유용한 정보</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
+        <ul class="sub"> 
+          <li><a href="#none">공지사항</a></li>
+          <li><a href="#none">공연&행사</a></li>
+          <li><a href="#none">여행공유(사진)</a></li>
+          <li><a href="#none">여행공유(리뷰)</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="util"> 
+      <li><a href="https://www.youtube.com/BTOrganization" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://www.instagram.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+    </ul>
+  </div>
 
   <script src="js/jquery-3.7.0.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
+  <script src="js/menu.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
