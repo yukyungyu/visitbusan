@@ -1,0 +1,62 @@
+@import url(common.css);
+@import url(../fonts/SUIT-woff2/SUIT.css);
+
+@media screen and (max-width:767px) {
+  /* ------------------- Default CSS ------------------- */
+  body {
+    font-family: 'SUIT';
+    position: relative;
+  }
+  section {
+    padding: 0 20px;
+    padding: 0 1.250rem;
+  }
+  .main {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    position: relative;
+  }
+  .main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  .visual{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .page-title {
+    display: block;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-size: 1.750rem;
+    color: #fff;
+    font-weight: 700;
+    z-index: 5;
+  }
+  .lo-home {
+    width: 24px;
+    height: 24px;
+  }
+  .location {
+    line-height: 24px;
+    padding: 10px 20px;
+    padding: 0.625rem 1.250rem;
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+    color: #767676;
+  }
+  /* ------------------- END ------------------- */
+
+}
