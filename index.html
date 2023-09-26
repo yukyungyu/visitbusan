@@ -23,23 +23,23 @@
   <!-- section: category -->
   <section id="category">
     <div class="cate-icon">
-      <a href="#none"><img src="images/icons/category/lighthouse.png" alt="아이콘_부산에가면"></a>
+      <a href="/attraction.html"><img src="images/icons/category/lighthouse.png" alt="아이콘_부산에가면"></a>
       <span class="icon-title">부산에 가면</span>
     </div>
     <div class="cate-icon">
-      <a href="#none"><img src="images/icons/category/plane.png" alt="아이콘_추천여행"></a>
+      <a href="/schedule.html"><img src="images/icons/category/plane.png" alt="아이콘_추천여행"></a>
         <span class="icon-title">추천여행</span></a>
     </div>
     <div class="cate-icon">
-      <a href="#none"><img src="images/icons/category/carrier.png" alt="아이콘_여행준비"></a>
+      <a href="/traffic.html"><img src="images/icons/category/carrier.png" alt="아이콘_여행준비"></a>
         <span class="icon-title">여행준비</span></a>
     </div>
     <div class="cate-icon">
-      <a href="#none"><img src="images/icons/category/info.png" alt="아이콘_유용한정보"></a>
+      <a href="/notice.html"><img src="images/icons/category/info.png" alt="아이콘_유용한정보"></a>
         <span class="icon-title">유용한 정보</span></a>
     </div>
     <div class="cate-icon">
-      <a href="#none"><img src="images/icons/category/calendar.png" alt="아이콘_행사달력"></a>
+      <a href="/festival.html"><img src="images/icons/category/calendar.png" alt="아이콘_행사달력"></a>
         <span class="icon-title">행사달력</span></a>
     </div>
   </section>
@@ -72,7 +72,13 @@
       <span class="header-title">이 달의 축제&amp;이벤트</span>
       <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
     </div>
-    <div></div>
+    <div class="">
+      <div></div>
+      <div>
+        <span class="fes-type">축제</span>
+        <span class="fes-name">별바다부산 나이트 페스타</span>
+      </div>
+    </div>
   </section>
   <!-- section: attraction -->
   <section id="attraction">
@@ -80,11 +86,15 @@
       <span class="header-title"><b>선선한 가을,</b><br>방문하기 좋은 명소</span>
       <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
     </div>
-    <div></div>
+    <div class="att-contents">
+      <div class="cont">
+        <div class="circle"><img src="" alt=""></div>
+      </div>
+    </div>
   </section>
   <!-- section: recommend -->
   <section id="recommend">
-    <div></div>
+    <div class="recomment-contents"></div>
   </section>
   <!-- section: tourist info -->
   <section id="tourist-info">
@@ -92,12 +102,27 @@
       <span class="header-title">관광안내소</span>
       <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
     </div>
-    <div class="card"></div>
+    <div class="tour-contents">
+      <div class="card">
+        <p class="info-title">광안리관광안내소</p>
+        <span class="info-address">부산광역시 수영구 광안해변로 219</span>
+        <span class="info-tel">051-610-4848</span>
+      </div>
+      <div class="card">
+        <p class="info-title">부산종합관광안내소</p>
+        <span class="info-address">부산광역시 중구 구덕로 31</span>
+        <span class="info-tel">051-253-8253</span>
+      </div>
+    </얖>
   </section>
   <!-- section: notice -->
   <section id="notice">
-    <div class="notice-title">공지사항</div>
-    <div>산복도로에서 펼쳐지는 공감투어 프로그램</div>
+    <div class="notice-inner">
+      <div class="notice-title">공지사항</div>
+      <div class="notice-slide">
+        산복도로에서 펼쳐지는 공감투어 프로그램
+      </div>
+    </div>
   </section>
   <!-- section end -->
   
@@ -113,11 +138,11 @@
   <!-- tabBar -->
   <div class="dockbar">
     <ul class="bottom_menu">
-      <li><a href="#none">
+      <li><a href="/">
         <img src="images/icons/home.png" alt="홈">
         <span>홈</span>
       </a></li>
-      <li><a href="#none">
+      <li><a href="/search.html">
         <img src="images/icons/search.png" alt="검색">
         <span>검색</span>
       </a></li>
@@ -125,7 +150,7 @@
         <img src="images/icons/menu.png" alt="메뉴">
         <span>메뉴</span>
       </a></li>
-      <li><a href="#none">
+      <li><a href="/login.html">
         <img src="images/icons/person.png" alt="마이홈">
         <span>마이홈</span>
       </a></li>
@@ -140,34 +165,34 @@
       <li class="gnb_in"><div class="gnb_menu"><a href="#none">부산에 가면</a>
         <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
         <ul class="sub">
-          <li><a href="#none">명소</a></li>
-          <li><a href="#none">축제</a></li>
-          <li><a href="#none">음식</a></li>
+          <li><a href="/attraction.html">명소</a></li>
+          <li><a href="/festival.html">축제</a></li>
+          <li><a href="/food.html">음식</a></li>
         </ul>
       </li>
       <li class="gnb_in"><div class="gnb_menu"><a href="#none">추천여행</a>
         <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
         <ul class="sub">
-          <li><a href="#none">일정여행</a></li>
-          <li><a href="#none">테마여행</a></li>
-          <li><a href="#none">체험해양</a></li>
+          <li><a href="/schedule.html">일정여행</a></li>
+          <li><a href="/theme.html">테마여행</a></li>
+          <li><a href="/activity.html">체험해양</a></li>
         </ul>
       </li>
       <li class="gnb_in"><div class="gnb_menu"><a href="#none">여행준비</a>
         <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
         <ul class="sub">
-          <li><a href="#none">교통정보</a></li>
-          <li><a href="#none">응급의료서비스</a></li>
-          <li><a href="#none">문화관광해설사</a></li>
+          <li><a href="/traffic.html">교통정보</a></li>
+          <li><a href="/emergency.html">응급의료서비스</a></li>
+          <li><a href="/cultureTour.html">문화관광해설사</a></li>
         </ul>
       </li>
       <li class="gnb_in"><div class="gnb_menu"><a href="#none">유용한 정보</a>
         <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
         <ul class="sub"> 
-          <li><a href="#none">공지사항</a></li>
-          <li><a href="#none">공연&행사</a></li>
-          <li><a href="#none">여행공유(사진)</a></li>
-          <li><a href="#none">여행공유(리뷰)</a></li>
+          <li><a href="/notice.html">공지사항</a></li>
+          <li><a href="/performance.html">공연&행사</a></li>
+          <li><a href="/sharePic.htm">여행공유(사진)</a></li>
+          <li><a href="/shareReview.html">여행공유(리뷰)</a></li>
         </ul>
       </li>
     </ul>
