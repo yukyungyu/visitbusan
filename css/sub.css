@@ -86,7 +86,6 @@ body{
     font-weight: 700;
     z-index: 5;
   }
-  }
   .location {
     /* line-height: 12px;
     line-height: 0.750rem; */
@@ -126,7 +125,7 @@ body{
   .foot_info em{font-style:normal;}
 
    /* #################### TabBar #################### */
-   .dockbar{
+  .dockbar{
     font-family: 'SUIT-Regular';
     position:fixed;
     bottom:0;
