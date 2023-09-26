@@ -1,14 +1,31 @@
 @import url(common.css);
 @import url(../fonts/SUIT-woff2/SUIT.css);
 
+/* color palette */
+:root {
+  --main-navy:  #132644;/* rgba(19, 38, 68); */
+  --main-blue:  #1645D3;/* rgba(22, 69, 211); */
+  --main-red: #FF414D; /* rgba(255, 56, 77); */ 
+  --main-sky: #D9ECF2; /* rgba(271, 236, 241); */
+  --main-lightsky: #D9ECF2; /* rgba(271, 236, 241, 0.6); */ 
+
+  /* 글자색 */
+  --black: #191919; /* rgba(25, 25, 25); */ 
+  --darkgray: #767676; /* rgba(118, 118, 118); */ 
+  --midgray: #D9D9D9; /* rgba(217, 217, 217); */ 
+  --lightgray: #EEEEEE; /*  rgba(238, 238, 238); */ 
+  --bluegray: #F1F1F5; /* rgba(241, 241, 241); */ 
+}
+
 body{
-  width:100%;
-  height:100vh;
+  width: 100%;
+  height: 100vh;
+  font-family: 'SUIT';
+  letter-spacing: -0.5px;
 }
 
 @media screen and (max-width:767px) {
   body {
-    font-family: 'SUIT';
     position: relative;
   }
   section {
@@ -25,9 +42,8 @@ body{
     font-size: 1.250rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 20px; /* 100% */
-    line-height: 1.250rem;
-    letter-spacing: -0.5px;
+    line-height: 1.2;
+    white-space: pre;
   }
   .more {
     color: #767676;
@@ -38,7 +54,7 @@ body{
     font-weight: 400;
     line-height: 16px; /* 133.333% */
     line-height: 1rem;
-    letter-spacing: -0.5px;
+    vertical-align: text-bottom;
   }
 
   /* ---------------------- Header ---------------------- */
@@ -97,7 +113,7 @@ body{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 20px; /* 83.333% */
+    line-height: 1.4;
     letter-spacing: -0.6px;
     margin-bottom: 13px;
   }
@@ -107,7 +123,7 @@ body{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 20px; /* 125% */
+    line-height: 1.2;
     letter-spacing: -0.4px;
   }
 
@@ -130,13 +146,13 @@ body{
     background: rgba(246, 246, 246, 0.94);
     margin-bottom: 5px;
     margin-bottom: 0.313rem;
-    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .cate-icon a img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 46px;
     height: 46px;
     object-fit: cover;
@@ -151,7 +167,6 @@ body{
     font-style: normal;
     font-weight: 500;
     line-height: 20px; /* 166.667% */
-    letter-spacing: -0.5px;
   }
 
   /* ---------------------- Section:weather ---------------------- */
@@ -160,6 +175,7 @@ body{
     height: 180px;
     margin-bottom: 36px;
     margin-bottom: 2.250rem;
+
   }
   #weather .weather-box {
     width: 100%;
@@ -201,29 +217,106 @@ body{
   } */
 
  /* ---------------------- Section:fes-event ---------------------- */
- #fes-event {
-   margin-bottom: 66px;
-   margin-bottom: 4.125rem;
+  #fes-event {
+    margin-bottom: 60px;
+    margin-bottom: 3.750rem;
   }
+
+
   /* ---------------------- Section:attraction ---------------------- */
   #attraction {
     margin-bottom: 60px;
     margin-bottom: 3.750rem;
   }
+  #attraction .header-title b {color: #1645D3;}
+  .att-contents {
+    margin-top: 25px;
+    margin-top: 1.563rem;
+  }
+  .cont {
+    width: 100%;
+    height: 100px;
+    padding: 12px 10px;
+    padding: 0.750rem 0.625rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+  .circle {
+    display: inline-block;        
+  }
+  .circle img {
+    width: 77px;
+    height: 77px;
+    border-radius: 100px;
+    border: 1px solid #000;
+  }
+
+
   /* ---------------------- Section:recommend ---------------------- */
   #recommend {
-    margin-bottom: 60px;
-    margin-bottom: 3.750rem;
+    margin-bottom: 132px;
+    margin-bottom: 2.750rem;
   }
+  .recomment-contents{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+
   /* ---------------------- Section:tourist-info ---------------------- */
   #tourist-info {
     margin-bottom: 44px;
-    margin-bottom: 2.750rem;
+    margin-bottom: 8.250em;
   }
+  .tour-contents {
+    margin-top: 14px;
+    margin-top: 0.875rem;
+  }
+  .card {
+    margin-bottom: 4px;
+    margin-bottom: 0.250rem;
+    width: 100%;
+    height: 75px;
+    border-radius: 10px;
+    border: 1px solid var(--bluegray);
+    background: #FFF;
+    padding: 8px 12px;
+    padding: 0.5rem 0.750rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .card .info-title {
+    font-size: 16px;
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+
+  .card .info-address,
+  .card .info-tel {
+    margin-top: 3px;
+    font-size: 12px;
+    font-size: 0.750rem;
+    color: var(--darkgray);
+  }
+
+
   /* ---------------------- Section:notice ---------------------- */
   #notice {
-    margin-bottom: 130px;
-    margin-bottom: 8.125rem;
+    padding: 0;
+    width: 100%;
+    height: 36px;
+    background-color: var(--main-sky);
+    gap: 6px;
+  }
+  .notice-inner {
+    padding: 10px 20px;
+    padding: 0.625rem 1.250rem;
+    display: flex;
+  }
+  .notict-title {
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 700;
   }
 
 
@@ -251,7 +344,7 @@ body{
 
 
    /* #################### TabBar #################### */
-   .dockbar{
+  .dockbar{
     font-family: 'SUIT-Regular';
     position:fixed;
     bottom:0;
