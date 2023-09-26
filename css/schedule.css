@@ -1,0 +1,81 @@
+:root{
+  /* 색상 */
+  --main: #132644;
+  --blue:#1645d3;
+  --red:#ff414d;
+  --blue2:#d9ecf2;
+  --blue3:#d9ecf2;
+  /* 글자 */
+  --font1:#191919;
+  --font2:#767676;
+  --font3:#d9d9d9;
+  --font4:#eeeeee;
+  --font5:#f1f1f5;
+  /* 폰트 사이즈 정리 */
+  --24px:1.500rem;
+  --22px:1.375rem;
+  --20px:1.250rem;
+  --16px:1.000rem;
+  --14px:0.875rem;
+  --12px:0.750rem;
+}
+/* _______________________________ Mobile (768이하) 기준 */
+
+
+@media screen and (max-width:767px) {
+
+  .contet_start{padding: 0 1.250rem;}
+  .tab_menu{
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab_menu li.tab_active{
+    color:#fff;
+    background-color: var(--blue);
+  }
+  .tab_menu li{
+    border: 1px solid var(--font4);
+    padding: 0.230rem 0.750rem;
+    border-radius: 0 10px 0 10px;
+    cursor: pointer;
+    font-size: var(--14px);
+  }
+
+
+
+
+  .search_box{
+    width: 100%;
+    padding: 1.250rem 0;
+    top: 130px;
+  }
+  .search_box::before{
+    content: '';
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    background: url(../images/icons/search_img.png) no-repeat center center;
+    background-size: cover;
+    width: 27px;
+    height: 27px;
+  }
+.search_box input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: transparent;
+  border-bottom: 1px solid var(--font3);
+  background-color: transparent;
+  font-size: 0.875em;
+  text-indent: 3%;
+  color: var(--font2);
+}
+.search_box input::placeholder{color: var(--font3);}
+.search_box input:focus::placeholder{opacity: 0;}
+input::-ms-clear,input::-ms-reveal{display:none;}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{display:none;}
+
+}

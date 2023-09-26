@@ -66,6 +66,7 @@
     font-size: 0.875em;
     text-indent: 3%;
     color: #d9d9d9;
+    appearance: none;
   }
   .search_box input::placeholder{color: var(--font3);}
   .search_box input:focus::placeholder{opacity: 0;}
