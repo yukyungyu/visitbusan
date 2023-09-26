@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   let now = new Date();
   let year = now.getFullYear(); //2023
   let month = now.getMonth();
@@ -55,4 +54,35 @@ $(document).ready(function() {
       $('.tempInfo').append(`${$temp_min}&nbsp;/&nbsp;${$temp_min}`);
     }
   });
+
+  /* swiper.min.js */
+  //메인비주얼
+
+
+  //축제&이벤트
+  const swiper2 = new Swiper('.fes-swiper', {
+    slidesPerView: 5,
+    spaceBetween: 12,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 12,
+      }
+    }
+  });
+
+  //추천코스
+  const swiper3 = new Swiper('.re-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    centeredSlides: true,
+    autoplay: 2500,
+    autoplayDisableOnInteraction: false,
+    loop: true
+  })
+
+  //공지사항
 });

@@ -2,9 +2,11 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>부산관광포털 비짓부산</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
@@ -72,11 +74,59 @@
       <span class="header-title">이 달의 축제&amp;이벤트</span>
       <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
     </div>
-    <div class="">
-      <div></div>
-      <div>
-        <span class="fes-type">축제</span>
-        <span class="fes-name">별바다부산 나이트 페스타</span>
+    <div class="fes-contents">
+      <!-- swiper slide -->
+      <div class="fes-swiper">
+        <div class="swiper-wrapper">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            <a href="performance.html">
+              <div class="fes-thumb">
+                <img src="images/main/169388830768487.jpg" alt="유라리건맥축제포스터">
+              </div>
+              <div class="fes-info">
+                <span class="fes-type">축제</span>
+                <span class="fes-name">2023 유라리건맥축제</span>
+              </div>
+            </a>
+          </div>
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <a href="performance.html">
+              <div class="fes-thumb">
+                <img src="images/main/169406438770066.png" alt="부산카페위크포스터">
+              </div>
+              <div class="fes-info">
+                <span class="fes-type">행사</span>
+                <span class="fes-name">제22회 부산카페위크</span>
+              </div>
+            </a>
+          </div>
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <a href="performance.html">
+              <div class="fes-thumb">
+                <img src="images/main/168353023689918.jpg" alt="부산일러스트레이션페어포스터">
+              </div>
+              <div class="fes-info">
+                <span class="fes-type">행사</span>
+                <span class="fes-name">부산일러스트레이션페어</span>
+              </div>
+            </a>
+          </div>
+          <!-- slide 4 -->
+          <div class="swiper-slide">
+            <a href="performance.html">
+              <div class="fes-thumb">
+                <img src="images/main/169320712094766.png" alt="모모스커피포스터">
+              </div>
+              <div class="fes-info">
+                <span class="fes-type">행사</span>
+                <span class="fes-name">모모스 커피 퍼블릭 프로그램, 디제잉 파티 &lt;시티, 시티&gt;</span>
+              </div>
+            </div>
+            </a>
+        </div>
       </div>
     </div>
   </section>
@@ -87,14 +137,37 @@
       <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
     </div>
     <div class="att-contents">
-      <div class="cont">
+      <div class="att-cont">
         <div class="circle"><img src="" alt=""></div>
       </div>
     </div>
   </section>
   <!-- section: recommend -->
   <section id="recommend">
-    <div class="recomment-contents"></div>
+    <div class="recommend-contents">
+      <div class="recommend-header">
+        <span class="small-title">추천코스</span>
+        <span class="big-title">오롯이 즐기는 여유,<br>
+          한옥카페 3선
+        </span>
+      </div>
+      <!-- swiper slide -->
+      <div class="re-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/main/hanok1.jpg" alt="한옥카페1">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/main/hanok2.jpg" alt="한옥카페2">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/main/hanok3.jpg" alt="한옥카페3">
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
   </section>
   <!-- section: tourist info -->
   <section id="tourist-info">
@@ -105,13 +178,21 @@
     <div class="tour-contents">
       <div class="card">
         <p class="info-title">광안리관광안내소</p>
-        <span class="info-address">부산광역시 수영구 광안해변로 219</span>
-        <span class="info-tel">051-610-4848</span>
+        <span class="info-address">
+          <img src="images/icons/map.svg" alt="지도아이콘">
+          부산광역시 수영구 광안해변로 219</span>
+        <span class="info-tel">
+          <img src="images/icons/call.svg" alt="전화아이콘">
+          051-610-4848</span>
       </div>
       <div class="card">
         <p class="info-title">부산종합관광안내소</p>
-        <span class="info-address">부산광역시 중구 구덕로 31</span>
-        <span class="info-tel">051-253-8253</span>
+        <span class="info-address">
+          <img src="images/icons/map.svg" alt="지도아이콘">
+          부산광역시 중구 구덕로 31</span>
+        <span class="info-tel">
+          <img src="images/icons/call.svg" alt="전화아이콘">
+          051-253-8253</span>
       </div>
     </얖>
   </section>
@@ -203,8 +284,8 @@
     </ul>
   </div>
 
+  <script src="js/swiper.min.js"></script>
   <script src="js/jquery-3.7.0.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
   <script src="js/menu.js"></script>
   <script src="js/index.js"></script>
 </body>
