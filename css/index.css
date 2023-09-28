@@ -15,13 +15,33 @@
   --midgray: #D9D9D9; /* rgba(217, 217, 217); */ 
   --lightgray: #EEEEEE; /*  rgba(238, 238, 238); */ 
   --bluegray: #F1F1F5; /* rgba(241, 241, 241); */ 
+
+  /* 폰트 사이즈 정리 */
+  --24px: 1.500rem;
+  --22px: 1.375rem;
+  --20px: 1.250rem;
+  --16px: 1.000rem;
+  --14px: 0.875rem;
+  --12px: 0.750rem;
+
+  /* font-weight */
+  --extralight: 200;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semibold: 400;
+  --bold: 700;
+  --extrabold: 800;
 }
 
+/* 사용예시 */
+h2{font-size: var(--16px);}
 body{
   width: 100%;
   height: 100vh;
   font-family: 'SUIT';
   letter-spacing: -0.5px;
+  color: var(--black);
 }
 
 @media screen and (max-width:767px) {
@@ -220,8 +240,51 @@ body{
   #fes-event {
     margin-bottom: 60px;
     margin-bottom: 3.750rem;
+    overflow-x: hidden;
   }
-
+  .fes-contents {
+    margin-top: 10px;
+    margin-top: 0.625rem;
+    width: 100%;
+    height: 250px;
+  }
+  .fes-swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 6px;
+  }
+  .fes-thumb {
+    border-radius: 10px;
+    width: 141px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .fes-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .fes-info span {
+    display: block;
+    margin-left: 5px;
+  }
+  .fes-type {
+    font-size: 10px;
+    font-size: 0.625rem;
+    color: var(--darkgray);
+    margin-top: 6px;
+  }
+  .fes-name {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 2px;
+    width: 136px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
 
   /* ---------------------- Section:attraction ---------------------- */
   #attraction {
@@ -233,7 +296,7 @@ body{
     margin-top: 25px;
     margin-top: 1.563rem;
   }
-  .cont {
+  .att-cont {
     width: 100%;
     height: 100px;
     padding: 12px 10px;
@@ -253,19 +316,62 @@ body{
 
   /* ---------------------- Section:recommend ---------------------- */
   #recommend {
-    margin-bottom: 132px;
+    margin-bottom: 44px;
     margin-bottom: 2.750rem;
   }
-  .recomment-contents{
+  .recommend-contents {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    position: relative;
   }
-
+  .recommend-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    color: #fff;
+  }
+  .recommend-header span {
+    display: block;
+    width: 100%;
+  }
+  .recommend-header .small-title {
+    margin-bottom: 6px;
+  }
+  .recommend-header .big-title {
+    font-size: 22px;
+    font-size: var(--22px);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .re-swiper {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1/0.9;
+    overflow: hidden;
+    /* height: 100%; */
+  }
+  .re-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .re-swiper .swiper-pagination {
+    bottom: -20px;
+  }
+  .re-swiper .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+  .re-swiper .swiper-pagination-bullet-active {
+    width: 6px;
+    height: 6px;
+  }
 
   /* ---------------------- Section:tourist-info ---------------------- */
   #tourist-info {
-    margin-bottom: 44px;
-    margin-bottom: 8.250em;
+    margin-bottom: 132px;
+    margin-bottom: 8.250rem;
   }
   .tour-contents {
     margin-top: 14px;
@@ -275,7 +381,7 @@ body{
     margin-bottom: 4px;
     margin-bottom: 0.250rem;
     width: 100%;
-    height: 75px;
+    height: 80px;
     border-radius: 10px;
     border: 1px solid var(--bluegray);
     background: #FFF;
