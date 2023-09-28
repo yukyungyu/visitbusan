@@ -4,9 +4,9 @@ $(document).ready(function(){
     let menuHeight = $(".menu_in").height();
 
     if(menuHeight < 500){
-      $(util).hide();
+      $('.util').hide();
     }else{
-      $(util).show();
+      $('.util').show();
     }
   });
 
@@ -20,10 +20,13 @@ $(document).ready(function(){
   $(".menu").click(function(){
     $(".menu_in").css({zIndex:"1000"}).stop().animate({height:"100%",opacity:"1"},800);
     $(".dockbar").stop().fadeOut("fast");
+    $(".util").stop().fadeIn(1500);
+    $(".util").css({zIndex:"1000"});
   });
   $(".close").click(function(){
     $(".menu_in").stop().animate({height:"0%",opacity:"0"},800);
     $(".dockbar").stop().fadeIn(1400);
+    $(".util").stop().fadeOut("fast");
   });
   
 

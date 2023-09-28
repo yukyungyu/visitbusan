@@ -91,7 +91,7 @@
     bottom:3.125rem;
     left:50%;
     transform:translateX(-50%);
-    z-index:1000;
+    display: none;
   }
   .util li{
     display:inline-block;
