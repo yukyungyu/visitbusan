@@ -1,0 +1,230 @@
+@import url(common.css);
+@import url(../fonts/SUIT-woff2/SUIT.css);
+
+:root{
+  /* 색상 */
+  --main: #132644;
+  --blue:#1645d3;
+  --red:#ff414d;
+  --blue2:#d9ecf2;
+  --blue3:#d9ecf2;
+  /* 글자 */
+  --font1:#191919;
+  --font2:#767676;
+  --font3:#d9d9d9;
+  --font4:#eeeeee;
+  --font5:#f1f1f5;
+}
+
+/* _______________________________ Mobile (768이하) 기준 */
+@media screen and (max-width:767px) {
+  body{
+    font-family: 'SUIT-Regular';
+    font-family: 'SUIT';
+    box-sizing: border-box;
+    height: 500px;
+    position:absolute;
+  }
+  /* header------------------------------------------------ */
+  header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  h1 img{
+    position: absolute;
+    width: 15%;
+    left: 43%;
+    top: 20px;
+    filter:invert(1);
+  }
+  .cls-1{fill:#132644;}
+  .search_box{
+    width: 100%;
+    padding: 1.250rem;
+    position: absolute;
+    top: 130px;
+    border-radius:0;
+  }
+  .search_box::before{
+    content: '';
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    background: url(../images/icons/search_img.png) no-repeat center center;
+    background-size: cover;
+    width: 27px;
+    height: 27px;
+  }
+  .search_box input{
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: transparent;
+    border-bottom: 1px solid var(--font3);
+    background-color: transparent;
+    font-size: 0.875em;
+    text-indent: 3%;
+    color: #d9d9d9;
+    appearance: none;
+    border-radius: 0;
+  }
+  .search_box input[type=search]{
+    border-radius: 0;
+  }
+  .search_box input::placeholder{color: var(--font3);}
+  .search_box input:focus::placeholder{opacity: 0;}
+  input::-ms-clear,input::-ms-reveal{display:none;}
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button,
+  input::-webkit-search-results-button,
+  input::-webkit-search-results-decoration{display:none;}
+
+  /* section===================================== */
+  /* content1--------- */
+  section{
+    margin-top: 58%;
+    padding: 1.875rem 1.250rem;
+    padding-bottom: 70px;
+  }
+  .content1{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 100%;
+  }
+  section h2{
+    font-size:1.000rem;
+    color: var(--font2);
+    font-weight: 600;
+    justify-content: flex-start;
+    margin: 0.813rem 0;
+  }
+  .con1_imgs{
+    position: relative;
+    padding: 1.250rem;
+    width: 100%;
+    height: 250px;
+  }
+  .item1,.item2,.item3,.item4,.item5,.item6,.item7{
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .item1{
+    position: absolute;
+    left: 0;
+    top:10%;
+    width: 80px;
+    height:80px;
+    background: url(../images/schedule/sub1-1.jpg) no-repeat center;
+    background-size: conver;
+    line-height: 80px;
+  }
+  .item2{
+    position: absolute;
+    left: 26%;
+    top:25%;
+    width: 50px;
+    height: 50px;
+    background: url(../images/schedule/sub1-2.jpg) no-repeat center;
+    background-size: conver;
+    line-height: 50px;
+  }
+  .item3{
+    position: absolute;
+    left: 41%;
+    top:0;
+    width: 80px;
+    height: 80px;
+    background: url(../images/schedule/sub1-3.jpg) no-repeat center;
+    background-size: conver;
+    line-height: 80px;
+  }
+  .item4{
+    position: absolute;
+    right:0%;
+    top:8%;
+    width: 120px;
+    height: 120px;
+    background: url(../images/schedule/sub1-4.jpg) no-repeat center;
+    background-size: conver;
+    line-height: 120px;
+  }
+  .item5{
+    position: absolute;
+    left: 5%;
+    top:48%;
+    width: 80px;
+    height:80px;
+    background: url(../images/schedule/sub1-5.jpg) no-repeat center;
+    background-size: conver;
+    line-height: 80px;
+  }
+  .item6{
+    position: absolute;
+    left: 33%;
+    top:45%;
+    width: 130px;
+    height:130px;
+    background: url(../images/schedule/sub1-6.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .item6 a{padding-top:35%;}
+  .item6 span{display: block;}
+  .item7{
+    position: absolute;
+    right: 5%;
+    top:65%;
+    width: 70px;
+    height: 70px;
+    background: url(../images/schedule/sub1-7.jpg) no-repeat center;
+    background-size: conver;
+    line-height: 70px;
+  }
+  .con1_imgs a{
+    display: inline-block;
+    width:inherit;
+    height: inherit;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #fff;
+  }
+
+  /* content2--------- */
+  .keyword{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .keyword li{
+    display: flex;
+    font-size: 0.875rem;
+    border: 1px solid var(--font3);
+    border-radius: 0 10px 0 10px;
+    padding: 0.350rem 0.865rem;
+    cursor: pointer;
+  }
+  .keyword li a{
+    width: inherit;
+    height: inherit;
+}
+.keyword li:hover{
+  border: 1px solid var(--red);
+  color:var(--red);
+}
+  .keyword li:nth-child(1),
+  .keyword li:nth-child(6),
+  .keyword li:nth-child(10){
+    color: var(--red);
+    border: 1px solid var(--red);
+  }
+
+  .bottom_menu li a.active{color: var(--blue);}
+
+
+
+
+}
