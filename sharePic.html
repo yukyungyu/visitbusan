@@ -5,29 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>부산관광포털 비짓부산</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/sharePic.css">
 </head>
 <body>
   <!-- Header -->
   <header><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></header>
+  <!-- section start -->
   <!-- Visual -->
   <section class="main">
-    <img class="visual" src="images/visual/20200925172319415_thumbL.jpg" alt="비주얼">
+    <img class="visual" src="images/tripshare/20221222182338867_wufrotr.jpg" alt="비주얼">
     <h1 class="page-title">
-      명소
+      여행공유
     </h1>
     <p class="location">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
         <path d="M4.91185 9.45962V6.75773H7.08574V9.45962C7.08574 9.75683 7.3303 10 7.62922 10H9.25964C9.55855 10 9.80311 9.75683 9.80311 9.45962V5.67697H10.727C10.977 5.67697 11.0966 5.36896 10.9064 5.20684L6.36292 1.1378C6.1564 0.954068 5.84119 0.954068 5.63467 1.1378L1.09122 5.20684C0.906442 5.36896 1.02057 5.67697 1.27057 5.67697H2.19448V9.45962C2.19448 9.75683 2.43904 10 2.73795 10H4.36837C4.66728 10 4.91185 9.75683 4.91185 9.45962Z" fill="#767676"/>
       </svg>
-      부산에 가면&nbsp;>&nbsp;명소
+      유용한정보&nbsp;&gt;&nbsp;여행공유
     </p>
   </section>
   <!-- Contents Start (Section)-->
-  
+  <section class="share-content">
+    <div class="tab">
+      <span data-alt="tab-photo" class="active">사진</span>
+      <span data-alt="tab-review">리뷰</span>
+    </div>
+    <!-- 사진 tab -->
+    <div class="tab-contents active" id="tab-photo">
+      <div class="total">총(전체) 1,513건</div>
+      <div class="photo-box">
+        <div class="photo-info">
+          <div class="photo-user-info">
+            <span class="user-name">윤**</span>
+            <span class="date">2023-09-16</span>
+          </div>
+          <div class="like"></div>
+        </div>
+        <div class="text">
+          부산을 제대로 느껴보고 싶은 분들이 계시다면 저는 단연코 사직야구장을 방문해 보시는 걸 추천합니다. Lorem ipsum dolor sit amet consectetur adipisicing elit. In magni vitae, ipsa iusto, maiores a alias enim nemo tempore nam placeat fuga? Iure accusantium mollitia laborum, cupiditate maiores fugit minima!
+        </div>
+        <div class="photos">
+
+        </div>
+      </div>
+      <div class="paging"></div>
+      <button class="reg-btn">등록하기</button>
+    </div>
+    <!-- 리뷰 tab -->
+    <div class="tab-contents" id="tab-review">
+      <div class="total">총(전체) 3,137건</div>
+      <div class="review-box">
+      
+      </div>
+      <button class="reg-btn">등록하기</button>
+    </div>
+  </section>
   <!-- Contents End -->
+  <!-- section end -->
   
   <!-- Footer -->
   <footer>
@@ -100,15 +137,27 @@
       </li>
     </ul>
     <ul class="util"> 
-      <li><a href="https://www.youtube.com/BTOrganization" target="_blank"><i class="fas fa-brands fa-youtube"></i></a></li>
-      <li><a href="https://www.instagram.com/visitbusan.kr" target="_blank"><i class="fas fa-brands fa-instagram"></i></a></li>
-      <li><a href="https://www.facebook.com/visitbusan.kr" target="_blank"><i class="fas fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="https://www.youtube.com/BTOrganization" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://www.instagram.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
     </ul>
   </div>
 
 
+  <script src="js/swiper.min.js"></script>
   <script src="js/jquery-3.7.0.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
   <script src="js/menu.js"></script>
+  <script>
+    $('.tab span').click(function() {
+      let tabName = $(this).attr('data-alt');
+
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+
+      $('#' + tabName).addClass('active');
+      $('#' + tabName).siblings().removeClass('active');
+    });
+
+  </script>
 </body>
 </html>

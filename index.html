@@ -5,54 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>부산관광포털 비짓부산</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico">
+  <!-- google icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- font awesome -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
+  <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <!-- Header -->
   <header><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></header>
-  <!-- section start -->
-  <!-- section: visual -->
+  
+  <!-- section: 비주얼 -->
   <section id="main">
-    <img class="main-img" src="images/visual/main1.jpg" alt="메인비주얼">
-    <div class="main-text">
-      <span class="big-text">도심 속 작은 어촌마을<br>청사포와 미포</span>
-      <span class="samll-text">소박한 바다감성을 느낄 수 있는 곳</span>
+    <div class="main-swiper">
+      <div class="swiper-wrapper">
+        <!-- slide 1 -->
+        <div class="swiper-slide">
+          <img class="main-img" src="images/visual/main1.jpg" alt="메인비주얼1">
+          <div class="main-text">
+            <span class="big-text">
+              도심 속 작은 어촌마을<br>청사포와 미포
+            </span>
+            <span class="samll-text">
+              소박한 바다감성을 느낄 수 있는 곳
+            </span>
+          </div>
+        </div>
+        <!-- slide 2 -->
+        <div class="swiper-slide">
+          <img class="main-img" src="images/visual/main2.jpg" alt="메인비주얼2">
+          <div class="main-text">
+            <span class="big-text">
+              광안리의 밤은<br>당신의 낮보다 아름답다
+            </span>
+            <span class="samll-text">
+              낭만의 정석, 광안리 바다
+            </span>
+          </div>
+        </div>
+        <!-- slide 3 -->
+        <div class="swiper-slide">
+          <img class="main-img" src="images/visual/main3.jpg" alt="메인비주얼3">
+          <div class="main-text">
+            <span class="big-text">
+              을숙도 가을산책,<br>서울워커의 부산여행
+            </span>
+            <span class="samll-text">
+              시원한 강바람 따라 걷는 을숙도 하루 여행코스
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- slide end -->
+      <div class="swiper-pagination"></div>
     </div>
   </section>
-  <!-- section: category -->
+  <!-- section: 카테고리 아이콘 -->
   <section id="category">
-    <div class="cate-icon">
-      <a href="attraction.html"><img src="images/icons/category/lighthouse.png" alt="아이콘_부산에가면"></a>
+    <div class="cate-icon" onClick="location.href='attraction.html'">
+      <div class="icon-box">
+        <img src="images/icons/category/lighthouse.png" alt="아이콘_부산에가면">
+      </div>
       <span class="icon-title">부산에 가면</span>
     </div>
-    <div class="cate-icon">
-      <a href="schedule.html"><img src="images/icons/category/plane.png" alt="아이콘_추천여행"></a>
-        <span class="icon-title">추천여행</span></a>
+    <div class="cate-icon" onclick="location.href='schedule.html'">
+      <div class="icon-box">
+        <img src="images/icons/category/plane.png" alt="아이콘_추천여행">
+      </div>
+      <span class="icon-title">추천여행</span>
     </div>
-    <div class="cate-icon">
-      <a href="traffic.html"><img src="images/icons/category/carrier.png" alt="아이콘_여행준비"></a>
-        <span class="icon-title">여행준비</span></a>
+    <div class="cate-icon" onclick="location.href='traffic.html'">
+      <div class="icon-box">
+        <img src="images/icons/category/carrier.png" alt="아이콘_여행준비">
+      </div>
+      <span class="icon-title">여행준비</span>
     </div>
-    <div class="cate-icon">
-      <a href="sharePic.html"><img src="images/icons/category/info.png" alt="아이콘_유용한정보"></a>
-        <span class="icon-title">유용한 정보</span></a>
+    <div class="cate-icon" onclick="location.href='sharePic.html'">
+      <div class="icon-box">
+        <img src="images/icons/category/info.png" alt="아이콘_유용한정보">
+      </div>
+      <span class="icon-title">유용한 정보</span>
     </div>
-    <div class="cate-icon">
-      <a href="performance.html"><img src="images/icons/category/calendar.png" alt="아이콘_행사달력"></a>
-        <span class="icon-title">행사달력</span></a>
+    <div class="cate-icon" onclick="location.href='performance.html'">
+      <div class="icon-box">
+        <img src="images/icons/category/calendar.png" alt="아이콘_행사달력">
+      </div>
+      <span class="icon-title">행사달력</span></a>
     </div>
   </section>
-  <!-- section: weather -->
+  <!-- section: 날씨 -->
   <section id="weather">
     <div class="weather-box">
       <div class="weather-1">
         <div class="weather-2">
+          <div class="CurrIcon"></div>
           <div class="city"></div>
           <div class="date"></div>
-          <div class="CurrIcon"></div>
           <div class="weather_description"></div>
         </div>
         <div class="weather-3">
@@ -68,7 +121,7 @@
       </div>
     </div>
   </section>
-  <!-- section: festival&event-->
+  <!-- section: 이 달의 축제 이벤트-->
   <section id="fes-event">
     <div class="section-header">
       <span class="header-title">이 달의 축제&amp;이벤트</span>
@@ -130,19 +183,91 @@
       </div>
     </div>
   </section>
-  <!-- section: attraction -->
+  <!-- section: 명소 -->
   <section id="attraction">
     <div class="section-header">
       <span class="header-title"><b>선선한 가을,</b><br>방문하기 좋은 명소</span>
       <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
     </div>
     <div class="att-contents">
-      <div class="att-cont">
-        <div class="circle"><img src="" alt=""></div>
+      <div class="att-article">
+        <div class="att-img"><img src="images/attraction/list-01.jpg" alt="대저생태공원"></div>
+        <div class="att-info">
+          <p class="att-name">대저생태공원</p>
+          <p class="att-region">자연 · 강서구</p>
+          <div class="tags">
+            <span>주말 나들이</span>
+            <span>핑크뮬리</span>
+          </div>
+        </div>
+        <svg class="bookmark" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <g filter="url(#filter0_b_30_10)">
+            <circle cx="14" cy="14" r="14" fill="#D9D9D9"/>
+          </g>
+          <path d="M9.33334 7H18.6667M9.33334 9.33333L9.33334 21L14 16.1L18.6667 21V9.33333" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <filter id="filter0_b_30_10" x="-4" y="-4" width="36" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_30_10"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_30_10" result="shape"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      <div class="att-article">
+        <div class="att-img"><img src="images/attraction/list-03.jpg" alt="다대포해수욕장"></div>
+        <div class="att-info">
+          <p class="att-name">다대포해수욕장</p>
+          <p class="att-region">자연 · 사하구</p>
+          <div class="tags">
+            <span>부산해수욕장</span>
+            <span>일출·일몰</span>
+          </div>
+        </div>
+        <svg class="bookmark" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <g filter="url(#filter0_b_30_10)">
+            <circle cx="14" cy="14" r="14" fill="#D9D9D9"/>
+          </g>
+          <path d="M9.33334 7H18.6667M9.33334 9.33333L9.33334 21L14 16.1L18.6667 21V9.33333" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <filter id="filter0_b_30_10" x="-4" y="-4" width="36" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_30_10"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_30_10" result="shape"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      <div class="att-article">
+        <div class="att-img"><img src="images/attraction/attraction_3-2.jpg" alt="부산현대미술관"></div>
+        <div class="att-info">
+          <p class="att-name">부산현대미술관</p>
+          <p class="att-region">문화 · 사하구</p>
+          <div class="tags">
+            <span>미술관</span>
+            <span>실내여행지</span>
+          </div>
+        </div>
+        <svg class="bookmark" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <g filter="url(#filter0_b_30_10)">
+            <circle cx="14" cy="14" r="14" fill="#D9D9D9"/>
+          </g>
+          <path d="M9.33334 7H18.6667M9.33334 9.33333L9.33334 21L14 16.1L18.6667 21V9.33333" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <filter id="filter0_b_30_10" x="-4" y="-4" width="36" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_30_10"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_30_10" result="shape"/>
+            </filter>
+          </defs>
+        </svg>
       </div>
     </div>
   </section>
-  <!-- section: recommend -->
+  <!-- section: 추천 -->
   <section id="recommend">
     <div class="recommend-contents">
       <div class="recommend-header">
@@ -154,12 +279,15 @@
       <!-- swiper slide -->
       <div class="re-swiper">
         <div class="swiper-wrapper">
+          <!-- slide 1 -->
           <div class="swiper-slide">
             <img src="images/main/hanok1.jpg" alt="한옥카페1">
           </div>
+          <!-- slide 2 -->
           <div class="swiper-slide">
             <img src="images/main/hanok2.jpg" alt="한옥카페2">
           </div>
+          <!-- slide 3 -->
           <div class="swiper-slide">
             <img src="images/main/hanok3.jpg" alt="한옥카페3">
           </div>
@@ -169,7 +297,7 @@
       </div>
     </div>
   </section>
-  <!-- section: tourist info -->
+  <!-- section: 관광안내소 -->
   <section id="tourist-info">
     <div class="section-header">
       <span class="header-title">관광안내소</span>
@@ -196,12 +324,49 @@
       </div>
     </얖>
   </section>
-  <!-- section: notice -->
+  <!-- section: 공지사항 -->
   <section id="notice">
     <div class="notice-inner">
-      <div class="notice-title">공지사항</div>
-      <div class="notice-slide">
-        산복도로에서 펼쳐지는 공감투어 프로그램
+      <span class="notice-title">공지사항</span>
+      <!-- swiper slide -->
+      <div class="no-swiper nSlide-area">
+        <div class="swiper-wrapper">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            전망 좋은 카페 3곳(향인정, 블루뱅, 블루빈) 15% 할인쿠폰 이벤트
+          </div>
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            산복도로에서 펼쳐지는 공감투어 프로그램
+          </div>
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            2023 별·빛·강(별이 빛나는 수영강 LED 카약체험) 행사 안내
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="notice-btn">
+        <span class="read-more" onclick="location.href='notice.html'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect width="20" height="20" rx="4" fill="#132644"/>
+            <path d="M5 10H15" stroke="white"/>
+            <path d="M10 5L10 15" stroke="white"/>
+          </svg>
+        </span>
+        <span class="prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect width="20" height="20" rx="4" fill="#132644" fill-opacity="0.5"/>
+            <path d="M5 7L10 12L15 7" stroke="white"/>
+          </svg>
+        </span>
+        <span class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect width="20" height="20" rx="4" fill="#132644" fill-opacity="0.5"/>
+            <path d="M15 12L10 7L5 12" stroke="white"/>
+          </svg>
+        </span>
       </div>
     </div>
   </section>
@@ -219,7 +384,7 @@
   <!-- tabBar -->
   <div class="dockbar">
     <ul class="bottom_menu">
-      <li><a href="index.html">
+      <li><a href="main.html">
         <img src="images/icons/home.png" alt="홈">
         <span>홈</span>
       </a></li>
@@ -272,7 +437,7 @@
         <ul class="sub"> 
           <li><a href="notice.html">공지사항</a></li>
           <li><a href="performance.html">공연&행사</a></li>
-          <li><a href="sharePic.htm">여행공유(사진)</a></li>
+          <li><a href="sharePic.html">여행공유(사진)</a></li>
           <li><a href="shareReview.html">여행공유(리뷰)</a></li>
         </ul>
       </li>
@@ -285,6 +450,9 @@
   </div>
 
   <script src="js/swiper.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
   <script src="js/jquery-3.7.0.min.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/index.js"></script>

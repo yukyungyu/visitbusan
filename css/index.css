@@ -29,13 +29,14 @@
   --light: 300;
   --regular: 400;
   --medium: 500;
-  --semibold: 400;
+  --semibold: 600;
   --bold: 700;
   --extrabold: 800;
 }
 
 /* 사용예시 */
 h2{font-size: var(--16px);}
+
 body{
   width: 100%;
   height: 100vh;
@@ -45,6 +46,7 @@ body{
 }
 
 @media screen and (max-width:767px) {
+  html{font-size: 16px;}
   body {
     position: relative;
   }
@@ -61,7 +63,7 @@ body{
     font-size: 20px;
     font-size: 1.250rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--semibold);
     line-height: 1.2;
     white-space: pre;
   }
@@ -71,7 +73,7 @@ body{
     font-size: 12px;
     font-size: 0.750rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--regular);
     line-height: 16px; /* 133.333% */
     line-height: 1rem;
     vertical-align: text-bottom;
@@ -100,13 +102,17 @@ body{
   #main {
     padding: 0;
     width: 100%;
+    height: auto;
     margin-bottom: 30px;
     margin-bottom: 1.875rem;
     position: relative;
   }
+  .main-swiper {
+    width: 100%;
+    height: 100%;
+  }
   .main-img {
     width: 100%;
-    /* height: 100%; */
     height: 375px;
     object-fit:cover;
   }
@@ -131,7 +137,7 @@ body{
   .big-text {
     display: block;
     font-style: normal;
-    font-weight: 700;
+    font-weight: var(--bold);
     font-size: 24px;
     line-height: 1.4;
     letter-spacing: -0.6px;
@@ -141,11 +147,24 @@ body{
     display: block;
     font-family: SUIT;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--regular);
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: -0.4px;
   }
+  .main-swiper .swiper-pagination-progressbar {
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+  }
+  .main-swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #fff;
+  }
+  .main-swiper .swiper-horizontal>.swiper-pagination-progressbar,.swiper-pagination-progressbar.swiper-pagination-horizontal,.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    width: 90%;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+}
 
   /* ---------------------- Section:category ---------------------- */
   #category {
@@ -157,8 +176,9 @@ body{
   .cate-icon {
     flex:1;
     text-align: center;
+    cursor: pointer;
   }
-  .cate-icon a {
+  .cate-icon .icon-box {
     display: inline-block;
     width: 57px;
     height: 57px;
@@ -172,7 +192,7 @@ body{
     justify-content: center;
     align-items: center;
   }
-  .cate-icon a img {
+  .cate-icon .icon-box img {
     width: 46px;
     height: 46px;
     object-fit: cover;
@@ -185,16 +205,18 @@ body{
     font-size: 12px;
     font-size: 0.750rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--medium);
     line-height: 20px; /* 166.667% */
   }
 
   /* ---------------------- Section:weather ---------------------- */
   #weather  {
     width: 100%;
-    height: 180px;
+    height: 200px;
+    /* height: 180px; */
     margin-bottom: 36px;
     margin-bottom: 2.250rem;
+    border: 1px solid #000;
 
   }
   #weather .weather-box {
@@ -203,12 +225,13 @@ body{
     padding: 0 20px 20px;
     background-color: rgba(19, 38, 68, 0.9);
     backdrop-filter: blur(1px);
-    color: #D9ECF2;
     border-radius: 10px;
     background: #D9ECF2;
   }
-  /* .city {
-    font-size: 46px;
+  .city {
+    font-size: 12px;
+    font-size: var(--12px);
+    color: var(--darkgray);
   }
   .CurrIcon {
     font-size: 64px;
@@ -224,8 +247,10 @@ body{
     flex:1;
   }
   .CurrTemp {
-    font-size: 64px;
+    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
+    font-weight: var(--bold);
   }
   .tempInfo {
     text-align: center;
@@ -234,7 +259,7 @@ body{
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
-  } */
+  }
 
  /* ---------------------- Section:fes-event ---------------------- */
   #fes-event {
@@ -252,6 +277,10 @@ body{
     width: 100%;
     height: 100%;
     margin-top: 6px;
+  }
+  .fes-swiper .swiper-slide {
+    /* width: 141px;
+    height: 200px; */
   }
   .fes-thumb {
     border-radius: 10px;
@@ -277,7 +306,7 @@ body{
   .fes-name {
     font-size: 14px;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: var(--medium);
     margin-top: 2px;
     width: 136px;
     overflow: hidden;
@@ -296,28 +325,63 @@ body{
     margin-top: 25px;
     margin-top: 1.563rem;
   }
-  .att-cont {
+  .att-article {
     width: 100%;
     height: 100px;
     padding: 12px 10px;
     padding: 0.750rem 0.625rem;
     border-bottom: 1px solid var(--lightgray);
+    display: flex;
   }
-  .circle {
+  .att-img {
+    flex: 2;
     display: inline-block;        
   }
-  .circle img {
+  .att-img img {
     width: 77px;
     height: 77px;
     border-radius: 100px;
-    border: 1px solid #000;
   }
-
+  .att-info {
+    flex: 4;
+    text-align: left;
+    padding-top: 4px;
+  }
+  .att-name {
+    font-size: 14px;
+    font-size: var(--14px);
+    font-weight: var(--medium);
+    color: var(--black);
+    margin-bottom: 2px;
+  }
+  .att-region {
+    font-size: 10px;
+    font-size: 0.625rem;
+    color: var(--darkgray);
+    margin-bottom: 5px;
+  }
+  .tags {flex:1;}
+  .tags span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    padding: 2px 8px;
+    padding: 0.125rem 0.5rem;
+    margin-right: 5px;
+    border-radius: 100px;
+    border: 1px solid var(--darkgray);
+    font-size: 10px;
+    font-size: 0.625rem;
+  }
+  .bookmark {
+    cursor: pointer;
+  }
 
   /* ---------------------- Section:recommend ---------------------- */
   #recommend {
-    margin-bottom: 44px;
-    margin-bottom: 2.750rem;
+    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
   .recommend-contents {
     width: 100%;
@@ -341,7 +405,7 @@ body{
   .recommend-header .big-title {
     font-size: 22px;
     font-size: var(--22px);
-    font-weight: 600;
+    font-weight: var(--semibold);
     line-height: 1.4;
   }
   .re-swiper {
@@ -408,23 +472,51 @@ body{
 
   /* ---------------------- Section:notice ---------------------- */
   #notice {
-    padding: 0;
     width: 100%;
-    height: 36px;
+    height: 40px;
     background-color: var(--main-sky);
-    gap: 6px;
-  }
-  .notice-inner {
-    padding: 10px 20px;
-    padding: 0.625rem 1.250rem;
+    overflow: hidden;
     display: flex;
   }
-  .notict-title {
-    font-size: 12px;
-    font-size: 0.750rem;
-    font-weight: 700;
+  .notice-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: var(--12px);
+    align-items: center;
+    overflow: hidden;
   }
-
+  .notice-title {
+    font-weight: var(--bold);
+    text-align: left;
+    padding: 0 1px;
+    white-space: nowrap;
+  }
+  .nSlide-area {
+    overflow: hidden;
+    height: inherit;
+    padding: 0 5px;
+  }
+  .no-swiper .swiper-slide {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 1px;
+    line-height: 40px;
+  }
+  .notice-btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .notice-btn span {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
 
   /* ---------------------- Footer ---------------------- */
   footer{

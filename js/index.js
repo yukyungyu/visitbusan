@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  //weather
   let now = new Date();
   let year = now.getFullYear(); //2023
   let month = now.getMonth();
@@ -57,32 +58,61 @@ $(document).ready(function() {
 
   /* swiper.min.js */
   //메인비주얼
+  const swiper1 = new Swiper('.main-swiper', {
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    // paginationClickable: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  })
 
 
   //축제&이벤트
   const swiper2 = new Swiper('.fes-swiper', {
-    slidesPerView: 5,
-    spaceBetween: 12,
-    loop: true,
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 12,
-      }
-    }
+    slidesPerView: 2,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+    loop: true
   });
 
   //추천코스
   const swiper3 = new Swiper('.re-swiper', {
     slidesPerView: 1,
     spaceBetween: 40,
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
-    centeredSlides: true,
-    autoplay: 2500,
-    autoplayDisableOnInteraction: false,
-    loop: true
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   })
 
   //공지사항
+  const swiper4 = new Swiper('.no-swiper', {
+    slidesPerView: 1,
+    // spaceBetween: auto,
+    direction: "vertical",
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
 });

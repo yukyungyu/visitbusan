@@ -1,4 +1,5 @@
 @import url(common.css);
+@import url(sub.css);
 @import url(../fonts/SUIT-woff2/SUIT.css);
 
 /* color palette */
@@ -34,19 +35,14 @@
   --extrabold: 800;
 }
 
-/* 사용예시 */
-h2{font-size: var(--16px);}
 body{
-  width:100%;
-  height:100vh;
+  width: 100%;
+  height: 100vh;
+  font-family: 'SUIT';
+  letter-spacing: -0.5px;
+  color: var(--black);
 }
-
 @media screen and (max-width:767px) {
-  /* ------------------- Default CSS ------------------- */
-  body {
-    font-family: 'SUIT';
-    position: relative;
-  }
   section {
     padding: 0 20px;
     padding: 0 1.250rem;
@@ -71,22 +67,13 @@ body{
     filter: invert(1);
   }
 
-  /* ---------------------- Section:visual ---------------------- */
+  /* ---------------------- Section:visual   ---------------------- */
   .main {
     padding: 0;
     width: 100%;
     margin-bottom: 30px;
     margin-bottom: 1.875rem;
     position: relative;
-  }
-  .main::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.25);
   }
   .visual{
     width: 100%;
@@ -95,7 +82,7 @@ body{
   }
   .page-title {
     display: block;
-    position: absolute;
+    position: absolute; 
     top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -105,10 +92,7 @@ body{
     font-weight: 700;
     z-index: 5;
   }
-
   .location {
-    /* line-height: 12px;
-    line-height: 0.750rem; */
     vertical-align: middle;
     padding: 10px 20px;
     padding: 0.625rem 1.250rem;
@@ -120,9 +104,111 @@ body{
   .location svg {
     vertical-align: middle;
   }
+  /* ---------------------- Section:content  ---------------------- */
+  .share-content {
+    height: 1000px;
+    overflow: hidden;
+  }
+  .tab {
+    width: 100%;
+    margin: 30px auto 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab span {
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    font-weight: var(--semibold);
+  }
+  .tab span.active {
+    color: var(--main-blue);
+    border-bottom: 3px solid var(--main-blue);
+  }
+  .tab-contents {
+    display: none;
+  }
+  .tab-contents.active {
+    display: block;
+  }
+  .total {
+    padding: 10px 0;
+    padding: 0.625rem 0;
+    font-weight: var(--semibold);
+    border-bottom: 1px solid var(--bluegray);
+    margin-bottom: 20px;
+  }
+  .photo-box, .review-box {
+    border-bottom: 1px solid var(--bluegray);
+    margin-bottom: 20px;
+  }
+  .photo-box {
+
+  }
+  .photo-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .photo-user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-user-info span {
+    padding: 10px 0;
+    padding: 0.625rem 0;
+  }
+  .user-name, .date {
+    font-weight: var(--regular);
+    font-size: 12px;
+    font-size: var(--12px);
+  }
+  .user-name {
+
+  }
+  .date {
+    color: var(--darkgray);
+  }
+  .like {
+
+  }
+  .text {
+    border: 1px solid #000;
+    height: 50px;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    font-weight: var(--medium);
+  }
+  .photos {}
+
+  .review-box {
+
+  }
 
 
-  /* ______Footer______ */
+
+
+
+  .paging {
+    margin-bottom: 30px;
+  }
+  .reg-btn {
+    display: block;
+    width: 96px;
+    height: 35px;
+    margin: 0 auto 60px;
+    background-color: var(--main-blue);
+    border-radius: 100px;
+    border: none;
+    font-size: 14px;
+    font-size: var(--14px);
+    color: #fff;
+    font-weight: var(--medium);
+    cursor: pointer;
+  }
+
+  /* ---------------------- Footer ---------------------- */
   footer{
     width:100%;
     max-width:767px;
@@ -144,7 +230,8 @@ body{
   }
   .foot_info em{font-style:normal;}
 
-   /* #################### TabBar #################### */
+
+    /* #################### TabBar #################### */
   .dockbar{
     font-family: 'SUIT-Regular';
     position:fixed;
@@ -159,6 +246,7 @@ body{
     box-sizing:border-box;
     filter: drop-shadow(0px -2px 10px rgba(0, 0, 0, 0.15));
     backdrop-filter: blur(10px);
+    z-index: 5;
   }
   .bottom_menu{
     width:inherit;
@@ -176,6 +264,4 @@ body{
   }
   .bottom_menu li:hover{color:#1645D3;}
   .bottom_menu li img{width:1.500rem;}
-  /* ------------------- END ------------------- */
-
 }
