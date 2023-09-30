@@ -135,7 +135,6 @@
   .X_align{
     display: flex;
     overflow-x: auto;
-    overflow-y: hidden;
     height: 200px;
   }
   .X_align::-webkit-scrollbar {
