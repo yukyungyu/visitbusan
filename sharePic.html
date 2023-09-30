@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>부산관광포털 비짓부산</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico">
+  <!-- 구글아이콘 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/menu.css">
@@ -12,11 +15,11 @@
 </head>
 <body>
   <!-- Header -->
-  <header><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></header>
+  <header><a href="main.html"><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></a></header>
   <!-- section start -->
   <!-- Visual -->
   <section class="main">
-    <img class="visual" src="images/tripshare/20221222182338867_wufrotr.jpg" alt="비주얼">
+    <img class="visual" src="images/tripshare/tripshare-visual-1.jpg" alt="비주얼">
     <h1 class="page-title">
       여행공유
     </h1>
@@ -30,35 +33,205 @@
   <!-- Contents Start (Section)-->
   <section class="share-content">
     <div class="tab">
-      <span data-alt="tab-photo" class="active">사진</span>
-      <span data-alt="tab-review">리뷰</span>
+      <span data-alt="tab-photo">사진</span>
+      <span data-alt="tab-review" class="active">리뷰</span>
     </div>
     <!-- 사진 tab -->
-    <div class="tab-contents active" id="tab-photo">
+    <div class="tab-contents" id="tab-photo">
       <div class="total">총(전체) 1,513건</div>
-      <div class="photo-box">
+      <div class="cont-box">
         <div class="photo-info">
           <div class="photo-user-info">
             <span class="user-name">윤**</span>
             <span class="date">2023-09-16</span>
           </div>
-          <div class="like"></div>
+          <div class="like">
+            <span class="like-cnt">5</span>
+            <span class="material-icons heart">
+              favorite
+            </span>
+          </div>
         </div>
-        <div class="text">
-          부산을 제대로 느껴보고 싶은 분들이 계시다면 저는 단연코 사직야구장을 방문해 보시는 걸 추천합니다. Lorem ipsum dolor sit amet consectetur adipisicing elit. In magni vitae, ipsa iusto, maiores a alias enim nemo tempore nam placeat fuga? Iure accusantium mollitia laborum, cupiditate maiores fugit minima!
+        <div class="text-box">
+          부산을 제대로 느껴보고 싶은 분들이 계시다면 저는 단연코 사직야구장을 방문해 보시는 걸 추천합니다. 야구의 도시 부산 답게 엄청난 함성 소리와 함께 신나는 응원가를 함께 부르다 보면 어느새 부산과 롯데자이언츠에 흠뻑 빠져버리실 지도 모르겠습니다! 어떻게 보면 사직야구장은 부산의 문화의 한 부분을 차지하는 의미 있는 장소라고 생각하고 방문하시면 정말 즐거운 추억 만드실 수 있을거예요!
         </div>
-        <div class="photos">
-
+        <div class="photos photo-1">
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-1-1.jpg" alt="후기사진">
+          </div>
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-1-2.jpg" alt="후기사진">
+          </div>
         </div>
       </div>
-      <div class="paging"></div>
+      <div class="cont-box">
+        <div class="photo-info">
+          <div class="photo-user-info">
+            <span class="user-name">윤**</span>
+            <span class="date">2023-09-16</span>
+          </div>
+          <div class="like">
+            <span class="like-cnt">5</span>
+            <span class="material-icons heart">
+              favorite
+            </span>
+          </div>
+        </div>
+        <div class="text-box">
+          부산시립미술관은 벡스코와 센텀시티 신세계 백화점 근처에 위치하고 있어서, 주변 문화시설들과 함께 둘러보기 너무 좋은 곳인데요, 미술관 자체도 부산시를 대표하는 미술관 답게 실·내외로 정말 다양한 전시가 진행되고 있습니다. 유명 작가들의 작품은 물론이고 특히 본관의 상설전시나 기획전시 외에도 별관에 이우환 작가의 작품을 전시한 이우환 공간이 있는데요, 이곳에 꼭 방문해보시길 바랍니다. 관람을 하면서 삶과 미술에 대한 많은 생각을 해볼 수 있었습니다. 정말 강추드리는 공간입니다!
+        </div>
+        <div class="photos photo-2">
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-2-1.jpg" alt="후기사진">
+          </div>
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-2-2.jpg" alt="후기사진">
+          </div>
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-2-3.jpg" alt="후기사진">
+          </div>
+        </div>
+      </div>
+      <div class="cont-box">
+        <div class="photo-info">
+          <div class="photo-user-info">
+            <span class="user-name">L****</span>
+            <span class="date">2023-09-15</span>
+          </div>
+          <div class="like">
+            <span class="like-cnt">3</span>
+            <span class="material-icons heart">
+              favorite
+            </span>
+          </div>
+        </div>
+        <div class="text-box">
+          이런 데에 가는 것이 너무 좋습니다. 저도 옛날에는 한국에 처음 왔었을때  우리 학교에서 했던 비슷한 프로그램에 참여해가지고 한국과 특히 부산의 유명한 음식들 다 만들기 배웠습니다. 부산의 유명한 음식들, 부산의 맛 잘 아시죠? 부른다면요. 
+        </div>
+        <div class="photos photo-3">
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-3.jpg" alt="후기사진">
+          </div>
+        </div>
+      </div>
+
+      <!-- 페이징 -->
+      <div class="paging">
+        <span class="material-symbols-outlined arrow-left">
+          chevron_left
+        </span>
+        <span class="pg-num"> 1  2  3  4  5 / 100 </span>
+        <span class="material-symbols-outlined arrow-right">
+          chevron_right
+          </span>
+      </div>
       <button class="reg-btn">등록하기</button>
     </div>
     <!-- 리뷰 tab -->
-    <div class="tab-contents" id="tab-review">
+    <div class="tab-contents active" id="tab-review">
       <div class="total">총(전체) 3,137건</div>
-      <div class="review-box">
-      
+      <div class="cont-box">
+        <div class="review-info">
+          <span class="r-user-photo">
+            <img src="images/tripshare/profile1-2.jpg" alt="프로필사진">
+          </span>
+          <div class="review-user-info">
+            <span class="r-user-name">윤**</span>
+            <span class="date">2023-09-16 00:11
+            </span>
+          </div>
+          <div class="like">
+            <span class="like-cnt">5</span>
+            <span class="material-icons heart">
+              favorite
+            </span>
+          </div>
+        </div>
+        <div class="r-text-box">
+          <div class="text-title">열정과 에너지가 가득한 ‘작은부산’ 사직야구장</div>
+          <div class="text">부산하면 야구, 야구하면 부산을 떠올릴 정도로 부산의 야구사랑은 유별나다. 세계 어느 스포츠팬보다도 유별난 부산 사람들의 야구 사랑으로 최고의 인기구단으로 통하는 롯데 자이언츠의 홈구장인 사직야구장은 특색 있는 응원문화가 여럿 있다.</div>
+        </div>
+        <div class="more"><a href="#none">더보기&nbsp;&gt;</a></div>
+        <div class="reviews r-photo-1">
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-1-1.jpg" alt="후기사진">
+          </div>
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-1-2.jpg" alt="후기사진">
+          </div>
+        </div>
+      </div>
+      <div class="cont-box">
+        <div class="review-info">
+          <div class="r-user-photo">
+            <img src="images/tripshare/profile2.jpg" alt="프로필사진">
+          </div>
+          <div class="review-user-info">
+            <span class="r-user-name">L****</span>
+            <span class="date">2023-09-16 00:08
+            </span>
+          </div>
+          <div class="like">
+            <span class="like-cnt">5</span>
+            <span class="material-icons heart">
+              favorite
+            </span>
+          </div>
+        </div>
+        <div class="r-text-box">
+          <div class="text-title">영화 속 부산을 찾아가는 쏠쏠한 재미</div>
+          <div class="text">영화 도둑들의 촬영지로 유명한 데파트는 원도심의 역사와 함께한 건물입니다. 근처에 롯데백화점을 비롯하여 많은 새로운 건물들이 들어섰지만, 데파트는 지금도 옛 모습을 잘 간직하고 있습니다. 비록 과거처럼 많은 사람들로 붐비지는 않지만 고즈넉함과 그 땐 그랬지라는 느낌을 받을 수 있는 곳이에요! 추억여행 그리고 느린 여행을 좋아하시는 분들께 정말 추천드리는 장소입니다.</div>
+        </div>
+        <div class="more"><a href="#none">더보기&nbsp;&gt;</a></div>
+        <div class="reviews r-photo-2">
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-4-1.jpg" alt="후기사진">
+          </div>
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-4-2.jpg" alt="후기사진">
+          </div>
+          <div class="img-box third">
+            <img src="images/tripshare/tripshare-4-3.jpg" alt="후기사진">
+          </div>
+        </div>
+      </div>
+      <div class="cont-box">
+        <div class="review-info">
+          <span class="r-user-photo">
+            <img src="images/tripshare/profile3.jpg" alt="프로필사진">
+          </span>
+          <div class="review-user-info">
+            <span class="r-user-name">이**</span>
+            <span class="date">2023-09-14 11:47
+            </span>
+          </div>
+          <div class="like">
+            <span class="like-cnt">5</span>
+            <span class="material-icons heart">
+              favorite
+            </span>
+          </div>
+        </div>
+        <div class="r-text-box">
+          <div class="text-title">부산 강서여행 당일 코스(맥도생태공원)</div>
+          <div class="text">서울에 한강이 있다면, 부산에는 낙동강이 있죠! 한강이 도시 느낌이 물씬 풍기는 강이라면 낙동강은 자연의 느낌을 그대로 보여주는 강이라고 할 수 있을 것 같아요. 특히 여기 글에 나온 비아조라는 카페에 가시면 강을 따라 테이블이 있는데 잔잔한 강이 흐르는 걸 보면서 마시는 커피와 음료는 이루 말할 수 없이 완벽합니다. 저는 여기서 정말 힐링하고 왔어요. 일상에 지친 분들에게 정말 강추드리는 장소입니다.</div>
+        </div>
+        <div class="more"><a href="#none">더보기&nbsp;&gt;</a></div>
+        <div class="reviews r-photo-3">
+          <div class="img-box">
+            <img src="images/tripshare/tripshare-5.jpg" alt="후기사진">
+          </div>
+        </div>
+      </div>
+      <!-- 페이징 -->
+      <div class="paging">
+        <span class="material-symbols-outlined arrow-left">
+          chevron_left
+        </span>
+        <span class="pg-num"> 1  2  3  4  5 / 100 </span>
+        <span class="material-symbols-outlined arrow-right">
+          chevron_right
+          </span>
       </div>
       <button class="reg-btn">등록하기</button>
     </div>
@@ -78,7 +251,7 @@
   <!-- tabBar -->
   <div class="dockbar">
     <ul class="bottom_menu">
-      <li><a href="index.html">
+      <li><a href="main.html">
         <img src="images/icons/home.png" alt="홈">
         <span>홈</span>
       </a></li>
@@ -131,8 +304,7 @@
         <ul class="sub"> 
           <li><a href="notice.html">공지사항</a></li>
           <li><a href="performance.html">공연&행사</a></li>
-          <li><a href="sharePic.html">여행공유(사진)</a></li>
-          <li><a href="shareReview.html">여행공유(리뷰)</a></li>
+          <li><a href="sharePic.html">여행공유</a></li>
         </ul>
       </li>
     </ul>
@@ -141,6 +313,31 @@
       <li><a href="https://www.instagram.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
       <li><a href="https://www.facebook.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
     </ul>
+  </div>
+  
+  <!-- modal -->
+  <div id="popup"> <!--popup_box-->
+    <div class="pop_body clear">
+      <ul class="pop">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
+      <!-- 버튼(좌우+close) -->
+      <ul class="m_btn">
+        <li class="btn_close">
+          <i class="material-icons">clear</i>
+        </li>
+        <li class="left_btn">
+          <i class="material-icons">keyboard_arrow_left</i>
+        </li>
+        <li class="right_btn">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </li>
+        <li class="g_page"><span>1</span> / <span>15</span></li>
+      </ul>
+    </div>			
   </div>
 
 
@@ -158,6 +355,19 @@
       $('#' + tabName).siblings().removeClass('active');
     });
 
+    $('.img-box').click(function(){
+      let parent = $(this).parent()[0].className;
+      console.log(parent);
+      let img_cnt =  $('.'+parent).children().length;
+      console.log(img_cnt);
+      g_pop=$(this).index();
+      console.log(`g_pop: ${g_pop}`);
+
+      $(".g_page span:nth-child(1)").text(g_pop+1);  //오른쪽 상단 페이지번호
+      $("html").css({overflowY:"hidden"}); //기존 html 스크롤 숨기기
+      $(".pop>li").eq(g_pop).show();  //각 목록의 내용
+      $("#popup").stop().fadeIn(); //검정배경
+    });
   </script>
 </body>
 </html>

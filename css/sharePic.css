@@ -106,7 +106,6 @@ body{
   }
   /* ---------------------- Section:content  ---------------------- */
   .share-content {
-    height: 1000px;
     overflow: hidden;
   }
   .tab {
@@ -139,12 +138,12 @@ body{
     border-bottom: 1px solid var(--bluegray);
     margin-bottom: 20px;
   }
-  .photo-box, .review-box {
+  .cont-box {
     border-bottom: 1px solid var(--bluegray);
     margin-bottom: 20px;
   }
-  .photo-box {
-
+  .cont-box:last-child {
+    border: none;
   }
   .photo-info {
     display: flex;
@@ -170,28 +169,186 @@ body{
   .date {
     color: var(--darkgray);
   }
-  .like {
+ 
+  .text-box {
+    font-weight: var(--medium);
+    /* 2줄 이상은 줄임 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+  }
+  .photos {
+    width: 100%;
+    gap: 10px;
+    display: grid;
+    margin-bottom: 20px;
+  }
+  .photos div {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .photos div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .photo-1 {
+    height: 122px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .photo-2 {
+    height: 162px;
+    grid-template-columns: 53% 45%;
+  }
+  .photo-2 div:first-child {
+    grid-row: span 2;
+  }
+  .photo-3 {
+    height: 251px;
+  }
 
+  /* 리뷰 */
+  .review-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .r-user-photo {
+    flex:1;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .r-user-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .review-user-info {
+    flex:4;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .r-user-name {
+    font-size: var(--medium);
+  }
+  .r-text-box {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+  }
+  .text-title {
+    font-weight: var(--semibold);
   }
   .text {
-    border: 1px solid #000;
-    height: 50px;
-    /* overflow: hidden; */
+    font-size: 14px;
+    font-size: var(--14px);
+    color: var(--darkgray);
+    /* 4줄 이상은 줄임 */
+    overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: var(--medium);
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
   }
-  .photos {}
-
-  .review-box {
-
+  .reviews {
+    width: 100%;
+    gap: 10px;
+    display: grid;
+    margin-bottom: 20px;
+  }
+  .reviews .img-box {
+    overflow: hidden;
+  }
+  .reviews .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .r-photo-1 {
+    height: 122px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .r-photo-2 {
+    height: 122px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .r-photo-3 {
+    /* grid-template-columns: ; */
+  }
+  .third{
+    position: relative;
+  }
+  .third::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 15;;
+  }
+  .third::after {
+    position: absolute;
+    content: '+2';
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 15;
   }
 
 
 
 
 
+  .like {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .like .like-cnt {
+    font-size: 12px;
+    font-size: var(--12px);
+    color: var(--darkgray)
+  }
+  .like .heart {
+    font-size: 24;
+    font-size: var(--24px);
+    color: #eb3223;
+  }
+  .material-symbols-outlined.heart {
+    font-variation-settings:
+    'FILL' 1,
+  }
+  .more {
+    text-align: right;
+    color: var(--darkgray);
+    font-size: 12px;
+    font-size: var(--12px);
+    margin-bottom: 14px;
+  }
   .paging {
-    margin-bottom: 30px;
+    margin: 50px auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow-left, .arrow-right {cursor: pointer;}
+  .pg-num {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
   }
   .reg-btn {
     display: block;
@@ -207,6 +364,91 @@ body{
     font-weight: var(--medium);
     cursor: pointer;
   }
+
+  /* modal */
+  #popup{ /*검정배경*/
+    display:none; 
+    position:fixed; 
+    left:0; 
+    top:0;
+    width:100%; 
+    height:100vh; 
+    background:rgba(0,0,0,0.7); 
+    z-index:1000;
+    overflow-y:scroll; 
+    /*auto로 하면 스크롤바의 폭때문에 콘텐츠와 버튼사이의 간격이 생김->버튼위치맞춤*/
+  }
+  /*각 목록별 나오는 모달팝업 내용 나오는 부분*/
+
+  .pop_body{   /*팝업내용박스*/
+    position:relative;
+    height:100vh;	
+    margin:0 auto;
+    width:100%;
+    /* background:#fff; */
+    z-index:10000;
+  }
+  .pop>li{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    display:none;
+  }
+
+  /*버튼영역*/ 
+  .m_btn{
+    position:fixed;
+    left:50%;
+    top:0px;
+    margin-left:492px;
+    width:30%;
+    height:30%;
+    color:#fff;
+    text-align:center;
+    overflow:hidden;
+    z-index:20000;
+    border: 1px solid red;
+  }
+  .m_btn>li{
+    cursor:pointer;
+    overflow:hidden;
+    background:#e29393;
+  }
+  .m_btn>li:hover{background:#de7575;}
+
+  /*닫기버튼*/
+  .m_btn .btn_close{
+    height:70px;
+    width:80px;
+    cursor:pointer;
+    border-bottom:1px solid #ecc2c2;
+  }
+  .m_btn .btn_close i{  /*아이콘폰트*/
+    position:relative;
+    top:15px;
+    font-size:40px;
+  }
+
+  /*다음이전 버튼*/
+
+  .m_btn .left_btn, .m_btn .right_btn{float:left;}
+  .m_btn .left_btn i,.m_btn .right_btn i{ 
+    position:relative;
+    top:10px;
+    font-size:30px;	
+    width:40px;
+    height:50px;	
+  }
+  .m_btn .g_page{  /*Page번호*/
+    font-size:12px;
+    color:#fff;
+    width:80px;
+    padding-top:10px;
+    height:50px;
+    text-align:center;
+  }
+
+
 
   /* ---------------------- Footer ---------------------- */
   footer{
