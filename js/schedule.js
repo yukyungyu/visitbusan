@@ -1,17 +1,6 @@
 $(document).ready(function(){
 
-  $(".tab_menu .all").click(function(){
 
-    $(this).addClass("tab_active");
-    $(".tab_menu li:not(.all)").removeClass("tab_active");
-    $(".contet_start hr").css("height","508%");
-    $(".contet_start h3 span").text("20");
-    $(".align .day").show();
-    $(".align .two_day").show();
-    $(".align .three_day").show();
-    $(".align .four_day").show();
-
-  });
 
 
   $(".tab_menu .day").click(function(){
@@ -62,6 +51,19 @@ $(document).ready(function(){
     $(".align .day").hide();
     $(".align .two_day").hide();
     $(".align .three_day").hide();
+    $(".align .four_day").show();
+
+  });
+
+  $(".tab_menu .all").click(function(){
+
+    $(this).addClass("tab_active");
+    $(".tab_menu li:not(.all)").removeClass("tab_active");
+    $(".contet_start hr").css("height","4295px");
+    $(".contet_start h3 span").text("20");
+    $(".align .day").show();
+    $(".align .two_day").show();
+    $(".align .three_day").show();
     $(".align .four_day").show();
 
   });
