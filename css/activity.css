@@ -120,7 +120,10 @@
   }
 
   /* contetn2----------------- */
-  .content_2{width: 100%;}
+  .content_2{
+    width: 100%;
+    padding-bottom: 10px;
+  }
   .content_2 h5{
     font-size: var(--16px);
     color: var(--font1);
@@ -135,6 +138,7 @@
   .X_align{
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     height: 200px;
   }
   .X_align::-webkit-scrollbar {
@@ -211,7 +215,8 @@
   .content_3{
     margin-top: 30px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
   }
   .content_3 h5{
     font-size: var(--16px);
