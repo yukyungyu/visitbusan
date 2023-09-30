@@ -1,0 +1,125 @@
+@import url(common.css);
+@import url(sub.css);
+@import url(../fonts/SUIT-woff2/SUIT.css);
+
+/* color palette */
+:root {
+  --main-navy:  #132644;/* rgba(19, 38, 68); */
+  --main-blue:  #1645D3;/* rgba(22, 69, 211); */
+  --main-red: #FF414D; /* rgba(255, 56, 77); */ 
+  --main-sky: #D9ECF2; /* rgba(271, 236, 241); */
+  --main-lightsky: #D9ECF2; /* rgba(271, 236, 241, 0.6); */ 
+
+  /* 글자색 */
+  --black: #191919; /* rgba(25, 25, 25); */ 
+  --darkgray: #767676; /* rgba(118, 118, 118); */ 
+  --midgray: #D9D9D9; /* rgba(217, 217, 217); */ 
+  --lightgray: #EEEEEE; /*  rgba(238, 238, 238); */ 
+  --bluegray: #F1F1F5; /* rgba(241, 241, 241); */ 
+
+  /* 폰트 사이즈 정리 */
+  --24px: 1.500rem;
+  --22px: 1.375rem;
+  --20px: 1.250rem;
+  --16px: 1.000rem;
+  --14px: 0.875rem;
+  --12px: 0.750rem;
+
+  /* font-weight */
+  --extralight: 200;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+  --extrabold: 800;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: 'SUIT';
+  letter-spacing: -0.5px;
+  color: var(--black);
+}
+
+@media screen and (max-width:767px) {
+
+  /* Calendar */
+  .calendar_title{
+    font-size:var(--20px);
+    font-weight:var(--semibold);
+    color:var(--black);
+    text-align:center;
+    margin-bottom:0.563rem;
+  }
+  table{
+    width:100%;
+    text-align:center;
+    /* border-collapse:separate;
+    border-spacing:0 1.875rem; */
+  }
+  tr:nth-of-type(2) td{padding-top:0.563rem;}
+  tr td{
+    font-size:var(--14px);
+    padding-bottom:1.875rem;
+  }
+  .week td{
+    font-size:var(--12px);
+    font-weight:var(--regular);
+    border-top:1px solid var(--lightgray);
+    border-bottom:1px solid var(--lightgray);
+    padding:0.563rem;
+  }
+  .next_month{color: var(--midgray);}
+  .day{cursor: pointer;}
+  .day span{
+    display:inline-block;
+    width:1.875rem;
+    height:1.875rem;
+    line-height:1.875rem;
+    background-color:var(--main-red);
+    border-radius:50%;
+    color:#fff;
+  }
+
+  /* Button */
+  .all{
+    color:#fff;
+    background-color:var(--main-blue);
+    padding: 0.230rem 0.750rem;
+    border-radius: 0 10px 0 10px;
+    cursor: pointer;
+    font-size: var(--14px);
+    border:none;
+    float:right;
+  }
+  
+  /* Event */
+  .event_list{margin:2.5rem 0 1.875rem;}
+  .event{
+    display:flex;
+    padding:var(--12px) 0;
+    border-bottom:1px solid var(--lightgray);
+  }
+  .event .img_box{
+    width:5.438rem;
+    height:5.438rem;
+    overflow:hidden;
+    border-radius:0.625rem;
+  }
+  .img_box img{width:5.438rem;}
+  .event_text{margin-left:var(--14px);}
+  .event_text h3{
+    font-weight:var(--semibold);
+    font-size:var(--16px);
+    padding-bottom:0.500rem;
+  }
+  .event_text p, .event_text span{
+    font-size:var(--12px);
+    color:var(--darkgray);
+    line-height:var(--16px);
+  }
+
+
+}
