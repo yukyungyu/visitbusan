@@ -211,7 +211,7 @@ body {
   
 
   .blue_content {
-    padding: 0 1.250rem;
+    /* padding: 0 1.250rem; */
     position: absolute;
     top: 20px;
     left: 0;
@@ -219,10 +219,18 @@ body {
   }
 
   .blue_content h2 {
+    padding: 0 1.250rem;
     font-size: var(--20px);
     font-weight: 700;
   }
 
+  .blue_slide{
+    padding: 0 1.250rem;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    border: 1px solid red;
+  }
   .slide_contents {
     position: absolute;
     top: 20px;
@@ -230,6 +238,8 @@ body {
     display: flex;
     gap: 16px;
     padding-top: 20px;
+    border: 1px solid #000;
+    width: 100%;
   }
 
   .slide_contents li {

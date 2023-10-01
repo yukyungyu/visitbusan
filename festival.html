@@ -15,7 +15,7 @@
 
 <body>
   <!-- Header -->
-  <header><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></header>
+  <header><a href="main.html"><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></a></header>
   <!-- Visual -->
   <section class="main">
     <img class="visual" src="images/attraction/header_image.png" alt="헤더이미지">
@@ -281,15 +281,12 @@
           <li><a href="cultureTour.html">문화관광해설사</a></li>
         </ul>
       </li>
-      <li class="gnb_in">
-        <div class="gnb_menu"><a href="#none">유용한 정보</a>
-          <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div>
-        </div>
-        <ul class="sub">
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">유용한 정보</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
+        <ul class="sub"> 
           <li><a href="notice.html">공지사항</a></li>
           <li><a href="performance.html">공연&행사</a></li>
-          <li><a href="sharePic.htm">여행공유(사진)</a></li>
-          <li><a href="shareReview.html">여행공유(리뷰)</a></li>
+          <li><a href="sharePic.html">여행공유</a></li>
         </ul>
       </li>
     </ul>
@@ -307,7 +304,13 @@
   <script src="js/jquery-3.7.0.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
   <script src="js/menu.js"></script>
-  <script src="js/food.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      
+
+    });
+  </script>
 </body>
 
 </html>
