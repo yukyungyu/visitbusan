@@ -96,14 +96,34 @@ body{
     vertical-align: middle;
     padding: 10px 20px;
     padding: 0.625rem 1.250rem;
-    font-size: 12px;
-    font-size: 0.750rem;
-    font-weight: 400;
-    color: #767676;
+    
   }
   .location svg {
     vertical-align: middle;
   }
+  .location span {
+    font-size: 12px;
+    font-size: var(--12px);
+    font-weight: 400;
+    color: #767676;
+  }
+  .pg_loc {
+    font-family: 'SUIT';
+    letter-spacing: -0.5px;
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+    color: #767676;
+    border: 0 none;
+    outline: 0 none;
+  }
+  .pg_loc option {
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+  }
+
+
   /* ---------------------- Section:content  ---------------------- */
   .share-content {
     overflow: hidden;
@@ -132,12 +152,13 @@ body{
     display: block;
   }
   .total {
+    font-size: var(--14px);
     padding: 10px 0;
     padding: 0.625rem 0;
-    font-weight: var(--semibold);
     border-bottom: 1px solid var(--bluegray);
     margin-bottom: 20px;
   }
+  .total span {color: var(--main-red);}
   .cont-box {
     border-bottom: 1px solid var(--bluegray);
     margin-bottom: 20px;
@@ -338,17 +359,23 @@ body{
     font-size: var(--12px);
     margin-bottom: 14px;
   }
-  .paging {
+  .page {
     margin: 50px auto 30px;
     display: flex;
+    gap: 8px;
     justify-content: center;
     align-items: center;
+    padding: 10px 0 60px;
+    color: var(--darkgray);
+    font-weight: 400;
   }
-  .arrow-left, .arrow-right {cursor: pointer;}
-  .pg-num {
-    display: inline-block;
-    height: 35px;
-    line-height: 35px;
+  .page span:nth-of-type(1){
+    color: var(--black);
+    font-weight: 800;
+  }
+  .page i{
+    font-size: var(--22px);font-weight: 300;
+    padding: 0 28px;
   }
   .reg-btn {
     display: block;
