@@ -42,7 +42,7 @@ $(document).ready(function() {
       weather_icon = 'Cloud';
       weather_description = '안개';
     }
-    let $url = `../images/main/weather/` + weather_icon + '.png';
+    let $url = `images/main/weather/` + weather_icon + '.png';
     $('.CurrIcon').append('<img class="weather-icon" src="' + $url +'" alt="날씨아이콘">');
     $('.weather_description').prepend(weather_description);
   };
