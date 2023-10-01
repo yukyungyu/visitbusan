@@ -331,7 +331,7 @@ body{
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
     row-gap: 18px;
-    padding: 10px 0 28px;
+    padding: 10px 0 0;
   }
 
   .conImgBox{
@@ -363,7 +363,10 @@ body{
     object-fit: contain;
     margin-top: 2px;
   }
-  .place span{width: 100%;}
+  .place span{
+    width: 100%;
+    word-break: keep-all;
+  }
 
   .conImg{
     height: 162px;
@@ -416,5 +419,24 @@ body{
     margin-top: -3px;
     font-weight: 300;
     margin-right: 0px;
+  }
+
+  /* 페이지번호 */
+  .page{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 60px;
+    color: var(--darkgray);
+    font-weight: 400;
+  }
+  .page span:nth-of-type(1){
+    color: var(--black);
+    font-weight: 800;
+  }
+  .page i{
+    font-size: var(--22px);font-weight: 300;
+    padding: 0 28px;
   }
 }
