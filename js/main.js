@@ -3,11 +3,13 @@ $(document).ready(function() {
   //weather
   let now = new Date();
   let year = now.getFullYear(); //2023
-  let month = now.getMonth();
+  let month = now.getMonth()+1;
   let day = now.getDate();
   let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let dateString = `${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분`;
+  if(hours < 10) {
+    hours = '0'+hours;
+  }
+  let dateString = `${year}년 ${month}월 ${day}일 ${hours}시`;
 
   $('.date').append(dateString);
 
@@ -15,16 +17,34 @@ $(document).ready(function() {
   //open weather API Key
   const W_API_KEY = 'ceea8d8b2328a9fe92124a81e944bb8e'
 
-  let weatherIcon = {
-    '01' : 'fas fa-sun',
-    '02' : 'fas fa-cloud-sun',
-    '03' : 'fas fa-cloud',
-    '04' : 'fas fa-cloud-meatball',
-    '09' : 'fas fa-cloud-sun-rain',
-    '10' : 'fas fa-cloud-showers-heavy',
-    '11' : 'fas fa-poo-storm',
-    '13' : 'far fa-snowflake',
-    '50' : 'fas fa-smog'
+  function changeIcon(weather) {
+    let weather_icon; 
+    let weather_description;
+    if (weather == 'Clear') {
+      weather_icon = 'Sun';
+      weather_description = '맑음';
+    } else if (weather == 'Clear') {
+      weather_icon = 'Cloud';
+      weather_description = '구름';
+    } else if (weather == 'Rain') {
+      weather_icon = 'Cloud mid rain';
+      weather_description = '비';
+    } else if (weather == 'Thunderstorm') {
+      weather_icon = 'Cloud 3 zap';
+      weather_description = '천둥번개';
+    } else if (weather == 'Drizzle') {
+      weather_icon = 'Cloud little rain';
+      weather_description = '이슬비';
+    } else if (weather == 'Snow') {
+      weather_icon = 'Big snow little snow';
+      weather_description = '눈';
+    } else if (weather == 'Atmosphere') {
+      weather_icon = 'Cloud';
+      weather_description = '안개';
+    }
+    let $url = `../images/main/weather/` + weather_icon + '.png';
+    $('.CurrIcon').append('<img class="weather-icon" src="' + $url +'" alt="날씨아이콘">');
+    $('.weather_description').prepend(weather_description);
   };
 
   $.ajax({
@@ -33,26 +53,20 @@ $(document).ready(function() {
     type:'GET',
     success:function(data){
       console.log(data);
-      // console.log(data.weather[0]);
+      let weather_description = data.weather[0].main;
+      changeIcon(weather_description);
+
       let $Icon = (data.weather[0].icon).substr(0,2);
-      let $weather_description = data.weather[0].main;
       let $Temp = Math.floor(data.main.temp) + 'º';
       const $city = data.name;
-      let $wind = '바람&nbsp;&nbsp;&nbsp;&nbsp;' +data.wind.speed + ' m/s';
-      let $humidity = '습도&nbsp;&nbsp;&nbsp;&nbsp;' + data.main.humidity+ ' %';
-      let $cloud = '구름&nbsp;&nbsp;&nbsp;&nbsp;' + data.clouds.all +"%";
-      let $temp_min = Math.floor(data.main.temp_min) + 'º';
-      let $temp_max = Math.floor(data.main.temp_max) + 'º';
-      
+      let $wind = data.wind.speed + ' m/s';
+      let $humidity = data.main.humidity+ ' %';
+      let $cloud = data.clouds.all +"%";
 
-      $('.CurrIcon').append('<i class="' + weatherIcon[$Icon] +'"></i>');
       $('.CurrTemp').prepend($Temp);
-      $('.weather_description').prepend($weather_description);
-      $('.humidity').prepend($humidity);
-      $('.wind').prepend($wind);
-      $('.city').append($city);
+      $('.humidity').append($humidity);
+      $('.wind').append($wind);
       $('.cloud').append($cloud);
-      $('.tempInfo').append(`${$temp_min}&nbsp;/&nbsp;${$temp_min}`);
     }
   });
 
@@ -88,11 +102,6 @@ $(document).ready(function() {
   const swiper3 = new Swiper('.re-swiper', {
     slidesPerView: 1,
     spaceBetween: 40,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
-    // loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -102,7 +111,6 @@ $(document).ready(function() {
   //공지사항
   const swiper4 = new Swiper('.no-swiper', {
     slidesPerView: 1,
-    // spaceBetween: auto,
     direction: "vertical",
     centeredSlides: true,
     autoplay: {
@@ -116,9 +124,7 @@ $(document).ready(function() {
     },
   })
 
-  const bookmark = document.querySelector('.bookmark');
-  bookmark.addEventListener('click', () => {
-    console.log('click');
-    this.setAttribute('fill', '#fff');
+  $('.bookmark').click(function() {
+    $(this).toggleClass('active');
   });
 });
