@@ -419,7 +419,8 @@ body {
   }
 
 
-  .page {
+  /* 페이지번호 */
+  .page{
     display: flex;
     gap: 8px;
     align-items: center;
@@ -428,14 +429,12 @@ body {
     color: var(--darkgray);
     font-weight: 400;
   }
-
-  .page span:nth-of-type(1) {
+  .page span:nth-of-type(1){
     color: var(--black);
     font-weight: 800;
   }
-
-  .page i {
-    font-size: var(--22px);
-    font-weight: 300;
+  .page i{
+    font-size: var(--22px);font-weight: 300;
+    padding: 0 28px;
   }
 }
