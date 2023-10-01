@@ -33,10 +33,13 @@
   /* Login */
   .bg-box {
     width: 100%;
-    margin-top: 150px;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 0;
     background-color: #fff;
     border-radius: 20px 20px 0 0;
-    padding: 60px 20px 0;
+    padding: 60px 20px 90px;
   }
   .login-box {
     width: 100%;
