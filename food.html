@@ -8,7 +8,7 @@
   <title>부산관광포털 비짓부산</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/food.css">
 </head>
@@ -32,10 +32,60 @@
     </p>
   </section>
   <!-- Contents Start (Section)-->
-  <div class="contentsBox">
-    <div class="blueRibbon">
-      <img src="images/food" alt="">
+  <div class="blueRibbon">
+    <img src="images/food/pattern.svg" alt="블루리본배경">
+    <div class="blue_content">
+      <div class="blue_desc">
+        <h3>블루리본 서베이</h3>
+        <div class="blue_title">
+          <h2>2023 부산의 맛집</h2>
+          <img src="images/food/blue_ribbon.svg" alt="블루리본아이콘">
+        </div>
+        <h4>미식의 뉴 웨이브 in 부산</h4>
+      </div>
+      <div class="blue_slide">
+        <ul class="slide_contents">
+          <li>
+            <img src="images/food/slide_01.png" alt="시티투어">
+            <h3>관광과 미식을 함께,</h3>
+            <h2>부산 시티투어버스 맛집</h2>
+          </li>
+          <li>
+            <img src="images/food/slide_02.png" alt="시티투어">
+            <h3>국제 관광도시,</h3>
+            <h2>부산에서 맛보는 세계음식</h2>
+          </li>
+          <li>
+            <img src="images/food/slide_03.png" alt="시티투어">
+            <h3>아름다운 부산 바다,</h3>
+            <h2>오션뷰 맛집</h2>
+          </li>
+          <li>
+            <img src="images/food/slide_04.png" alt="시티투어">
+            <h3>미식의 정점,</h3>
+            <h2>부산의 파인다이닝</h2>
+          </li>
+          <li>
+            <img src="images/food/slide_05.png" alt="시티투어">
+            <h3>부산의 클래식,</h3>
+            <h2>부산의 노포</h2>
+          </li>
+          <li>
+            <img src="images/food/slide_06.png" alt="시티투어">
+            <h3>달콤함과 쓴맛의 유혹,</h3>
+            <h2>디저트&커피</h2>
+          </li>
+        </ul>
+
+        <div class="slide_bar">
+          <div class="slide_bar_inner"></div>
+        </div>
+      </div>
     </div>
+    
+  </div>
+
+  <div class="contentsBox">
 
     <div class="tabBox">
       <ul class="tab_menu tm1">
@@ -44,36 +94,43 @@
         <li data-alt="tab3">#중식</li>
         <li data-alt="tab4">#일식</li>
         <li data-alt="tab5">#양식</li>
-        <ul class="tab_menu tm2">
-          <li data-alt="tab6">#아세안요리</li>
-          <li data-alt="tab7">#카페&베이커리</li>
-          <li data-alt="tab8">#해산물</li>
-        </ul>
+        <li data-alt="tab6">#아세안요리</li>
+        <li data-alt="tab7">#카페&베이커리</li>
+        <li data-alt="tab8">#해산물</li>
       </ul>
 
       <div class="search_box">
-        <input type="search"  placeholder="검색어를 입력해주세요." maxlength="10">
+        <select name="area" id="area">
+          <option value="s1">지역</option>
+          <option value="s2">중구</option>
+          <option value="s3">동구</option>
+          <option value="s4">남구</option>
+          <option value="s5">북구</option>
+          <option value="s6">부산진구</option>
+          <option value="s7">동래구</option>
+          <option value="s8">해운대구</option>
+        </select>
+        <input type="search" placeholder="검색어를 입력해주세요." maxlength="10">
       </div>
 
       <div class="tabContents">
-        <p class="total">총(전체) <b>325</b>건</p>
 
         <!-- TAB1############################## -->
         <div id="tab1" class="active">
+          <p class="total">총(전체) <b>271</b>건</p>
           <ul class="contents">
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>사하구 다대동 1674</span>
+                    <span>사상구 광장로81번길 79 2층</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-1.jpg" alt="다대포해변공원">
+                    <img src="images/food/food_1-1.jpg" alt="맹여사육전육회">
                   </div>
                 </div>
-                <h2 class="conTitle">다대포해변공원</h2>
+                <h2 class="conTitle">맹여사육전육회</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -85,16 +142,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#역사</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>기장군 장안읍 임랑해안길 1</span>
+                    <span>동래구 충렬대로 272번길 2</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_2-1.jpg" alt="박태준기념관">
+                    <img src="images/food/food_1-2.jpg" alt="본 고갈비">
                   </div>
                 </div>
-                <h2 class="conTitle">박태준기념관</h2>
+                <h2 class="conTitle">본 고갈비</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -106,16 +162,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#문화</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>동구 중앙대로 380(좌천동, 구.부산진역)</span>
+                    <span>해운대구 중동1로 36 2층</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_3-1.jpg" alt="국제커피박물관">
+                    <img src="images/food/food_1-3.jpg" alt="부다면옥">
                   </div>
                 </div>
-                <h2 class="conTitle">국제커피박물관</h2>
+                <h2 class="conTitle">부다면옥</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -127,16 +182,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>사상구 감전동 873</span>
+                    <span>부산진구 성지곡로 51번길 4</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-2.jpg" alt="감전야생화단지">
+                    <img src="images/food/food_1-4.jpg" alt="나탄약선요리">
                   </div>
                 </div>
-                <h2 class="conTitle">감전야생화단지</h2>
+                <h2 class="conTitle">나탄약선요리</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -148,16 +202,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>북구 구포동</span>
+                    <span>중구 광복로67번길 11</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-3.jpg" alt="금빛노을브릿지">
+                    <img src="images/food/food_1-5.jpg" alt="가미가식당">
                   </div>
                 </div>
-                <h2 class="conTitle">금빛노을브릿지</h2>
+                <h2 class="conTitle">가미가식당</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -169,58 +222,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#공원</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>강서구 대저2동 1200-32</span>
+                    <span>중구 남포길 25-3</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_4-1.jpg" alt="맥도생태공원">
+                    <img src="images/food/food_1-6.jpg" alt="할매집회국수">
                   </div>
                 </div>
-                <h2 class="conTitle">맥도생태공원</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#공원</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>강서구 대저1동 2314-11</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_4-2.jpg" alt="대저생태공원">
-                  </div>
-                </div>
-                <h2 class="conTitle">대저생태공원</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#문화</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>사하구 낙동남로 1191</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_3-2.jpg" alt="부산현대미술관">
-                  </div>
-                </div>
-                <h2 class="conTitle">부산현대미술관</h2>
+                <h2 class="conTitle">할매집회국수</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -233,20 +243,20 @@
 
         <!-- TAB2################################ -->
         <div id="tab2">
+          <p class="total">총(전체) <b>121</b>건</p>
           <ul class="contents">
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>사하구 다대동 1674</span>
+                    <span>사상구 광장로81번길 79 2층</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-1.jpg" alt="다대포해변공원">
+                    <img src="images/food/food_1-1.jpg" alt="맹여사육전육회">
                   </div>
                 </div>
-                <h2 class="conTitle">다대포해변공원</h2>
+                <h2 class="conTitle">맹여사육전육회</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -258,16 +268,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>사상구 감전동 873</span>
+                    <span>동래구 충렬대로 272번길 2</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-2.jpg" alt="감전야생화단지">
+                    <img src="images/food/food_1-2.jpg" alt="본 고갈비">
                   </div>
                 </div>
-                <h2 class="conTitle">감전야생화단지</h2>
+                <h2 class="conTitle">본 고갈비</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -279,16 +288,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>북구 구포동</span>
+                    <span>해운대구 중동1로 36 2층</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-3.jpg" alt="금빛노을브릿지">
+                    <img src="images/food/food_1-3.jpg" alt="부다면옥">
                   </div>
                 </div>
-                <h2 class="conTitle">금빛노을브릿지</h2>
+                <h2 class="conTitle">부다면옥</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -300,16 +308,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>서구 송도해변로 171</span>
+                    <span>부산진구 성지곡로 51번길 4</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-4.jpg" alt="송도해상케이블카">
+                    <img src="images/food/food_1-4.jpg" alt="나탄약선요리">
                   </div>
                 </div>
-                <h2 class="conTitle">송도해상케이블카</h2>
+                <h2 class="conTitle">나탄약선요리</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -321,16 +328,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>해운대구 석대동 77</span>
+                    <span>중구 광복로67번길 11</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-5.jpg" alt="해운대수목원">
+                    <img src="images/food/food_1-5.jpg" alt="가미가식당">
                   </div>
                 </div>
-                <h2 class="conTitle">해운대수목원</h2>
+                <h2 class="conTitle">가미가식당</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -342,58 +348,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#자연</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>기장군 일광면 화용길 299-106</span>
+                    <span>중구 남포길 25-3</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_1-6.jpg" alt="기장 달음산 자연휴양림">
+                    <img src="images/food/food_1-6.jpg" alt="할매집회국수">
                   </div>
                 </div>
-                <h2 class="conTitle">기장 달음산 자연휴양림</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#자연</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>강서구 가덕해안로1207번길 9-2</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_1-7.jpg" alt="대항어촌마을">
-                  </div>
-                </div>
-                <h2 class="conTitle">대항어촌마을</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#자연</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>기장군 철마면 철마천로 101</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_1-8.jpg" alt="부산치유의 숲">
-                  </div>
-                </div>
-                <h2 class="conTitle">부산치유의 숲</h2>
+                <h2 class="conTitle">할매집회국수</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -406,20 +369,20 @@
 
         <!-- TAB3################################ -->
         <div id="tab3">
+          <p class="total">총(전체) <b>17</b>건</p>
           <ul class="contents">
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#역사</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>기장군 장안읍 임랑해안길 1</span>
+                    <span>강서구 명지오션시티4로 84</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_2-1.jpg" alt="박태준기념관">
+                    <img src="images/food/food_2-1.jpg" alt="칸웨이">
                   </div>
                 </div>
-                <h2 class="conTitle">박태준기념관</h2>
+                <h2 class="conTitle">칸웨이</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -431,16 +394,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#역사</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>중구 대청로 104</span>
+                    <span>중구 동광길 75-1</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_2-2.jpg" alt="부산근현대역사관 별관">
+                    <img src="images/food/food_2-2.jpg" alt="석기시대">
                   </div>
                 </div>
-                <h2 class="conTitle">부산근현대역사관 별관</h2>
+                <h2 class="conTitle">석기시대</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -452,16 +414,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#역사</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>남구 유엔평화로 93</span>
+                    <span>동구 중앙대로248번길 3-11 (1층)</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_2-3.jpg" alt="턴 투워드 부산">
+                    <img src="images/food/food_2-3.jpg" alt="산동완탕교자관">
                   </div>
                 </div>
-                <h2 class="conTitle">턴 투워드 부산</h2>
+                <h2 class="conTitle">산동완탕교자관</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -473,16 +434,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>&#35;역사</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>영도구 태종로 46</span>
+                    <span>해운대구 해운대해변로209번나길 16</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_2-4.jpg" alt="영도대교">
+                    <img src="images/food/food_2-4.jpg" alt="부우사안">
                   </div>
                 </div>
-                <h2 class="conTitle">영도대교</h2>
+                <h2 class="conTitle">부우사안</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -494,16 +454,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>&#35;역사</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>서구 임시수도기념로 45</span>
+                    <span>부산진구 서전로 47번길 19</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_2-5.jpg" alt="임시수도기념관">
+                    <img src="images/food/food_2-5.jpg" alt="굿모닝홍콩">
                   </div>
                 </div>
-                <h2 class="conTitle">임시수도기념관</h2>
+                <h2 class="conTitle">굿모닝홍콩</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -515,58 +474,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#역사</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>동래구 명륜, 복천, 칠산, 명장, 안락동 일대</span>
+                    <span>구포만세길 75</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_2-6.jpg" alt="동래읍성">
+                    <img src="images/food/food_2-6.jpg" alt="금용">
                   </div>
                 </div>
-                <h2 class="conTitle">동래읍성</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#역사</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>동래구 복천로 63</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_2-7.jpg" alt="복천박물관/복천동고분군">
-                  </div>
-                </div>
-                <h2 class="conTitle">복천박물관/복천동고분군</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#역사</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>남구 유엔평화로 93</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_2-8.jpg" alt="유엔기념공원">
-                  </div>
-                </div>
-                <h2 class="conTitle">유엔기념공원</h2>
+                <h2 class="conTitle">금용</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -579,20 +495,20 @@
 
         <!-- TAB4############################## -->
         <div id="tab4">
+          <p class="total">총(전체) <b>36</b>건</p>
           <ul class="contents">
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#문화</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>동구 중앙대로 380(좌천동, 구.부산진역)</span>
+                    <span>금정구 금강로 247-10</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_3-1.jpg" alt="국제커피박물관">
+                    <img src="images/food/food_3-1.jpg" alt="톤쇼우 부산대점">
                   </div>
                 </div>
-                <h2 class="conTitle">국제커피박물관</h2>
+                <h2 class="conTitle">톤쇼우 부산대점</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -604,16 +520,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#문화</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>사하구 낙동남로 1191</span>
+                    <span>해운대구 우동1로 38번가길 15</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_3-2.jpg" alt="부산현대미술관">
+                    <img src="images/food/food_3-2.jpg" alt="타이가 텐푸라">
                   </div>
                 </div>
-                <h2 class="conTitle">부산현대미술관</h2>
+                <h2 class="conTitle">타이가 텐푸라</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -625,16 +540,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#문화</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>부산진구 동천로 58</span>
+                    <span>수영구 구락로 8-4</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_3-3.jpg" alt="서면미술관">
+                    <img src="images/food/food_3-3.jpg" alt="킹콩스시">
                   </div>
                 </div>
-                <h2 class="conTitle">서면미술관</h2>
+                <h2 class="conTitle">킹콩스시</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -646,16 +560,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#문화</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>수영구 구락로 123번길 20</span>
+                    <span>부산진구 서전로 38번길 35-14, 제일빌딩 102호</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_3-4.jpg" alt="현대 모터스튜디오 부산">
+                    <img src="images/food/food_3-4.jpg" alt="야스마루">
                   </div>
                 </div>
-                <h2 class="conTitle">현대 모터스튜디오 부산</h2>
+                <h2 class="conTitle">야스마루</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -667,16 +580,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#문화</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>수영구 무학로49번길 71</span>
+                    <span>금정구 부산대학로 29 네오스퀘어 2층</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_3-5.jpg" alt="광안종합시장">
+                    <img src="images/food/food_3-5.jpg" alt="스시심 타카이">
                   </div>
                 </div>
-                <h2 class="conTitle">광안종합시장</h2>
+                <h2 class="conTitle">스시심 타카이</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -688,58 +600,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#문화</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>부산진구 서면로 39</span>
+                    <span>수영구 남천바다로 34-6</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_3-6.jpg" alt="KT&G 상상마당 부산">
+                    <img src="images/food/food_3-6.jpg" alt="동경밥상">
                   </div>
                 </div>
-                <h2 class="conTitle">KT&G 상상마당 부산</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#문화</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>영도구 하나길 788</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_3-7.jpg" alt="영도 봉산마을">
-                  </div>
-                </div>
-                <h2 class="conTitle">영도 봉산마을</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#문화</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>사상구 사상로310번길 33</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_3-8.jpg" alt="부산도서관">
-                  </div>
-                </div>
-                <h2 class="conTitle">부산도서관</h2>
+                <h2 class="conTitle">동경밥상</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -752,20 +621,20 @@
 
         <!-- TAB5############################## -->
         <div id="tab5">
+          <p class="total">총(전체) <b>26</b>건</p>
           <ul class="contents">
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#공원</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>강서구 대저2동 1200-32</span>
+                    <span>부산진구 동천로58</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_4-1.jpg" alt="맥도생태공원">
+                    <img src="images/food/food_4-1.jpg" alt="오스테리아 어부">
                   </div>
                 </div>
-                <h2 class="conTitle">맥도생태공원</h2>
+                <h2 class="conTitle">오스테리아 어부</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -777,16 +646,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#공원</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>강서구 대저1동 2314-11</span>
+                    <span>중구 광복중앙로 24번길 9</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_4-2.jpg" alt="대저생태공원">
+                    <img src="images/food/food_4-2.jpg" alt="스톤스트릿">
                   </div>
                 </div>
-                <h2 class="conTitle">대저생태공원</h2>
+                <h2 class="conTitle">스톤스트릿</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -798,16 +666,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#공원</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>남구 우암동 12</span>
+                    <span>해운대구 해운대해변로209번길 13 바게트호텔 3층</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_4-3.jpg" alt="우암동 도시숲">
+                    <img src="images/food/food_4-3.jpg" alt="쉐프리">
                   </div>
                 </div>
-                <h2 class="conTitle">우암동 도시숲</h2>
+                <h2 class="conTitle">쉐프리</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -819,16 +686,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#공원</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>북구 화명동 1718-17</span>
+                    <span>해운대구 해운대해변로298번길 9</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_4-4.jpg" alt="화명생태공원">
+                    <img src="images/food/food_4-4.jpg" alt="버거인뉴욕">
                   </div>
                 </div>
-                <h2 class="conTitle">화명생태공원</h2>
+                <h2 class="conTitle">버거인뉴욕</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -840,16 +706,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#공원</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>기장군 기장읍 동부산관광로 42</span>
+                    <span>동구 영초윗길 22-1</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_4-5.jpg" alt="롯데월드 어드벤처 부산">
+                    <img src="images/food/food_4-5.jpg" alt="명란브랜드연구소">
                   </div>
                 </div>
-                <h2 class="conTitle">롯데월드 어드벤처 부산</h2>
+                <h2 class="conTitle">명란브랜드연구소</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -861,58 +726,15 @@
             <li>
               <a href="#none">
                 <div class="conImgBox">
-                  <p>#공원</p>
                   <div class="place">
                     <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>기장군 일광면 신평리 11-1</span>
+                    <span>강서구 가덕해안로 787-1</span>
                   </div>
                   <div class="conImg">
-                    <img src="images/attraction/attraction_4-6.jpg" alt="신평소공원">
+                    <img src="images/food/food_4-6.jpg" alt="1966정원">
                   </div>
                 </div>
-                <h2 class="conTitle">신평소공원</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#공원</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>부산진구 시민공원로 73</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_4-7.jpg" alt="부산시민공원">
-                  </div>
-                </div>
-                <h2 class="conTitle">부산시민공원</h2>
-                <div class="reaction">
-                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
-                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
-                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
-                </div>
-              </a>
-            </li>
-
-            <li>
-              <a href="#none">
-                <div class="conImgBox">
-                  <p>#공원</p>
-                  <div class="place">
-                    <img src="images/attraction/place.svg" alt="장소 아이콘">
-                    <span>중구 용두산길 37-55</span>
-                  </div>
-                  <div class="conImg">
-                    <img src="images/attraction/attraction_4-8.jpg" alt="용두산공원">
-                  </div>
-                </div>
-                <h2 class="conTitle">용두산공원</h2>
+                <h2 class="conTitle">1966정원</h2>
                 <div class="reaction">
                   <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
                   <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
@@ -922,6 +744,370 @@
             </li>
           </ul>
         </div>
+
+        <!-- TAB6############################## -->
+        <div id="tab6">
+          <p class="total">총(전체) <b>5</b>건</p>
+          <ul class="contents">
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>해운대구 송정광어골로 87</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_5-1.jpg" alt="어밤부">
+                  </div>
+                </div>
+                <h2 class="conTitle">어밤부</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>금정구 장전로 12번길 16</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_5-2.jpg" alt="포맨티코">
+                  </div>
+                </div>
+                <h2 class="conTitle">포맨티코</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>동래구 금강로73번길 12</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_5-3.jpg" alt="타이빈">
+                  </div>
+                </div>
+                <h2 class="conTitle">타이빈</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>수영로646번길 15</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_5-4.jpg" alt="양귀빈 식당 3호점">
+                  </div>
+                </div>
+                <h2 class="conTitle">양귀빈 식당 3호점</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>일광면 문오성길 43</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_5-5.jpg" alt="포에버얌">
+                  </div>
+                </div>
+                <h2 class="conTitle">포에버얌</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TAB7############################## -->
+        <div id="tab7">
+          <p class="total">총(전체) <b>23</b>건</p>
+          <ul class="contents">
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>중구 광복로 97번길 6</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_6-1.jpg" alt="바우노바">
+                  </div>
+                </div>
+                <h2 class="conTitle">바우노바</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+            
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>금정구 중앙대로 1667 1층</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_6-2.jpg" alt="보리종파티세리 본점">
+                  </div>
+                </div>
+                <h2 class="conTitle">보리종파티세리 본점</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>남구 못골로 41번길 13 상가 205동 101호</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_6-3.jpg" alt="브레드 365">
+                  </div>
+                </div>
+                <h2 class="conTitle">브레드 365</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>기장군 정관읍 병산로 117</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_6-4.jpg" alt="브레이크인 커피">
+                  </div>
+                </div>
+                <h2 class="conTitle">브레이크인 커피</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>강서구 가덕해안로 663</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_6-5.jpg" alt="브리타니">
+                  </div>
+                </div>
+                <h2 class="conTitle">브리타니</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>동래구 여고로 63번 나길 8</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_6-6.jpg" alt="빌라 빌레쿨라">
+                  </div>
+                </div>
+                <h2 class="conTitle">빌라 빌레쿨라</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TAB8############################## -->
+        <div id="tab8">
+          <p class="total">총(전체) <b>26</b>건</p>
+          <ul class="contents">
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>영도구 절영로 481</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_7-1.jpg" alt="제주복국">
+                  </div>
+                </div>
+                <h2 class="conTitle">제주복국</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>기장군 일광읍 학리등대로 102</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_7-2.jpg" alt="일미아구찜">
+                  </div>
+                </div>
+                <h2 class="conTitle">일미아구찜</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>동구 정공단로 46-1</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_7-3.jpg" alt="오륙도 낙지">
+                  </div>
+                </div>
+                <h2 class="conTitle">오륙도 낙지</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>사상구 주례로 12</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_7-4.jpg" alt="오대양횟집">
+                  </div>
+                </div>
+                <h2 class="conTitle">오대양횟집</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>동래구 명륜로 94번길 37</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_7-5.jpg" alt="소문난 원조 조방낙지">
+                  </div>
+                </div>
+                <h2 class="conTitle">소문난 원조 조방낙지</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#none">
+                <div class="conImgBox">
+                  <div class="place">
+                    <img src="images/attraction/place.svg" alt="장소 아이콘">
+                    <span>중구 광복로 43번길 18-5</span>
+                  </div>
+                  <div class="conImg">
+                    <img src="images/food/food_7-6.jpg" alt="원조 바다집">
+                  </div>
+                </div>
+                <h2 class="conTitle">원조 바다집</h2>
+                <div class="reaction">
+                  <p><i class="material-symbols-outlined">star</i><span>5.0</span></p>
+                  <p><i class="material-symbols-outlined">chat</i><span>10</span></p>
+                  <p><i class="material-symbols-outlined">favorite</i><span>32</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="page">
+        <i class="material-symbols-outlined">chevron_left</i>
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>/</span><span>17</span>
+        <i class="material-symbols-outlined">chevron_right</i>
       </div>
     </div>
   </div>
@@ -1017,10 +1203,12 @@
   </div>
 
 
+  <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+
   <script src="js/jquery-3.7.0.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
   <script src="js/menu.js"></script>
-  <script src="js/attraction.js"></script>
+  <script src="js/food.js"></script>
 </body>
 
 </html>
