@@ -10,7 +10,7 @@
   <!-- font awesome -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
   <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="css/swiper.min.css">
+  <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="css/menu.css">
@@ -18,7 +18,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></header>
+  <header><a href="main.html"><img class="header-logo" src="images/logo/logo_3x.png" alt="로고"></a></header>
   
   <!-- section: 비주얼 -->
   <section id="main">
@@ -125,7 +125,7 @@
   <section id="fes-event">
     <div class="section-header">
       <span class="header-title">이 달의 축제&amp;이벤트</span>
-      <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
+      <span class="more"><a href="festival.html">더보기&nbsp;&gt;</a></span>
     </div>
     <div class="fes-contents">
       <!-- swiper slide -->
@@ -187,12 +187,12 @@
   <section id="attraction">
     <div class="section-header">
       <span class="header-title"><b>선선한 가을,</b><br>방문하기 좋은 명소</span>
-      <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
+      <span class="more"><a href="attraction.html">더보기&nbsp;&gt;</a></span>
     </div>
     <div class="att-contents">
       <div class="att-article">
-        <div class="att-img"><img src="images/attraction/list-01.jpg" alt="대저생태공원"></div>
-        <div class="att-info">
+        <div class="att-img" onclick="location.href='attraction.html'"><img src="images/attraction/list-01.jpg" alt="대저생태공원"></div>
+        <div class="att-info" onclick="location.href='attraction.html'">
           <p class="att-name">대저생태공원</p>
           <p class="att-region">자연 · 강서구</p>
           <div class="tags">
@@ -216,8 +216,8 @@
         </svg>
       </div>
       <div class="att-article">
-        <div class="att-img"><img src="images/attraction/list-03.jpg" alt="다대포해수욕장"></div>
-        <div class="att-info">
+        <div class="att-img" onclick="location.href='attraction.html'"><img src="images/attraction/list-03.jpg" alt="다대포해수욕장"></div>
+        <div class="att-info" onclick="location.href='attraction.html'">
           <p class="att-name">다대포해수욕장</p>
           <p class="att-region">자연 · 사하구</p>
           <div class="tags">
@@ -241,9 +241,9 @@
         </svg>
       </div>
       <div class="att-article">
-        <div class="att-img"><img src="images/attraction/attraction_3-2.jpg" alt="부산현대미술관"></div>
+        <div class="att-img" onclick="location.href='attraction.html'"><img src="images/attraction/attraction_3-2.jpg" alt="부산현대미술관"></div>
         <div class="att-info">
-          <p class="att-name">부산현대미술관</p>
+          <p class="att-name" onclick="location.href='attraction.html'">부산현대미술관</p>
           <p class="att-region">문화 · 사하구</p>
           <div class="tags">
             <span>미술관</span>
@@ -301,7 +301,6 @@
   <section id="tourist-info">
     <div class="section-header">
       <span class="header-title">관광안내소</span>
-      <span class="more"><a href="#none">더보기&nbsp;&gt;</a></span>
     </div>
     <div class="tour-contents">
       <div class="card">
@@ -344,8 +343,6 @@
             2023 별·빛·강(별이 빛나는 수영강 LED 카약체험) 행사 안내
           </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
       <div class="notice-btn">
         <span class="read-more" onclick="location.href='notice.html'">
@@ -355,13 +352,13 @@
             <path d="M10 5L10 15" stroke="white"/>
           </svg>
         </span>
-        <span class="prev">
+        <span class="slidePrev-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <rect width="20" height="20" rx="4" fill="#132644" fill-opacity="0.5"/>
             <path d="M5 7L10 12L15 7" stroke="white"/>
           </svg>
         </span>
-        <span class="next">
+        <span class="slideNext-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <rect width="20" height="20" rx="4" fill="#132644" fill-opacity="0.5"/>
             <path d="M15 12L10 7L5 12" stroke="white"/>
@@ -405,7 +402,7 @@
 
   <!-- menu -->
   <div class="menu_in">
-    <div class="logo"><img src="images/logo/logo_3x.png" alt="로고"></div>
+    <div class="logo"><a href="main.html"><img src="images/logo/logo_3x.png" alt="로고"></a></div>
     <div class="close"><span class="material-symbols-outlined">close</span></div>
     <ul class="gnb">
       <li class="gnb_in"><div class="gnb_menu"><a href="#none">부산에 가면</a>
@@ -437,8 +434,7 @@
         <ul class="sub"> 
           <li><a href="notice.html">공지사항</a></li>
           <li><a href="performance.html">공연&행사</a></li>
-          <li><a href="sharePic.html">여행공유(사진)</a></li>
-          <li><a href="shareReview.html">여행공유(리뷰)</a></li>
+          <li><a href="sharePic.html">여행공유</a></li>
         </ul>
       </li>
     </ul>
@@ -449,7 +445,7 @@
     </ul>
   </div>
 
-  <script src="js/swiper.min.js"></script>
+  <!-- <script src="js/swiper.min.js"></script> -->
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 

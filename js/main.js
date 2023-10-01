@@ -77,22 +77,22 @@ $(document).ready(function() {
   const swiper2 = new Swiper('.fes-swiper', {
     slidesPerView: 2,
     spaceBetween: 10,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true,
-    },
-    loop: true
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: true,
+    // },
+    // loop: true
   });
 
   //추천코스
   const swiper3 = new Swiper('.re-swiper', {
     slidesPerView: 1,
     spaceBetween: 40,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    loop: true,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    // loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -111,8 +111,14 @@ $(document).ready(function() {
     },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".slideNext-btn",
+      prevEl: ".slidePrev-btn",
     },
   })
+
+  const bookmark = document.querySelector('.bookmark');
+  bookmark.addEventListener('click', () => {
+    console.log('click');
+    this.setAttribute('fill', '#fff');
+  });
 });
