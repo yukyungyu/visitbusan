@@ -1,0 +1,431 @@
+@import url(common.css);
+@import url(../fonts/SUIT-woff2/SUIT.css);
+
+/* color palette */
+:root {
+  --main-navy: #132644;
+  /* rgba(19, 38, 68); */
+  --main-blue: #1645D3;
+  /* rgba(22, 69, 211); */
+  --main-red: #FF414D;
+  /* rgba(255, 56, 77); */
+  --main-sky: #D9ECF2;
+  /* rgba(271, 236, 241); */
+  --main-lightsky: #D9ECF2;
+  /* rgba(271, 236, 241, 0.6); */
+
+  /* 글자색 */
+  --black: #191919;
+  /* rgba(25, 25, 25); */
+  --darkgray: #767676;
+  /* rgba(118, 118, 118); */
+  --midgray: #D9D9D9;
+  /* rgba(217, 217, 217); */
+  --lightgray: #EEEEEE;
+  /*  rgba(238, 238, 238); */
+  --bluegray: #F1F1F5;
+  /* rgba(241, 241, 241); */
+
+  /* 폰트 사이즈 정리 */
+  --24px: 1.500rem;
+  --22px: 1.375rem;
+  --20px: 1.250rem;
+  --16px: 1.000rem;
+  --14px: 0.875rem;
+  --12px: 0.750rem;
+}
+
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: var(--black);
+}
+
+@media screen and (max-width:767px) {
+
+  /* ------------------- Default CSS ------------------- */
+  body {
+    font-family: 'SUIT';
+    position: relative;
+  }
+
+  section {
+    padding: 0 20px;
+    padding: 0 1.250rem;
+  }
+
+  /* ---------------------- Header ---------------------- */
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .header-logo {
+    margin: 20px auto 0;
+    margin: 1.250rem auto 0;
+    width: 45px;
+    width: 2.813rem;
+    height: 30px;
+    height: 1.875rem;
+    transform: scale(1.2);
+    filter: invert(1);
+  }
+
+  /* ---------------------- Section:visual ---------------------- */
+  .main {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    position: relative;
+  }
+
+  .visual {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .page-title {
+    display: block;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-size: 1.750rem;
+    color: #fff;
+    font-weight: 700;
+    z-index: 5;
+  }
+
+  .location {
+    /* line-height: 12px;
+    line-height: 0.750rem; */
+    vertical-align: middle;
+    padding: 10px 20px;
+    padding: 0.625rem 1.250rem;
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+    color: #767676;
+  }
+
+  .location svg {
+    vertical-align: middle;
+  }
+
+
+  /* ______Footer______ */
+  footer {
+    width: 100%;
+    max-width: 767px;
+    margin: auto;
+    background-color: #132644;
+    color: #eee;
+    font-family: 'SUIT-Regular';
+    font-size: 0.625rem;
+    text-align: center;
+    line-height: 1.875rem;
+    padding-bottom: 4.500rem;
+  }
+
+  .foot_contents {
+    padding: 3.438rem 4.063rem;
+  }
+
+  .foot_menu,
+  .foot_info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .foot_info em {
+    font-style: normal;
+  }
+
+  /* #################### TabBar #################### */
+  .dockbar {
+    font-family: 'SUIT-Regular';
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 797px;
+    height: 4.500rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1.250rem 1.250rem 0 0;
+    box-sizing: border-box;
+    filter: drop-shadow(0px -2px 10px rgba(0, 0, 0, 0.15));
+    backdrop-filter: blur(10px);
+  }
+
+  .bottom_menu {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #767676;
+  }
+
+  .bottom_menu li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.750rem;
+  }
+
+  .bottom_menu li:hover {
+    color: #1645D3;
+  }
+
+  .bottom_menu li img {
+    width: 1.500rem;
+  }
+
+  /* ------------------- END ------------------- */
+
+  /* -------------- Contents Start (Section)-------------- */
+  /* 블루리본 서베이 */
+  .blueRibbon {
+    position: relative;
+    margin-top: -3%;
+  }
+
+  .blueRibbon>img {
+    width: 100%;
+    background: linear-gradient(180deg, #D9ECF2 0%, rgba(217, 236, 242, 0.20) 100%);
+    height: 420px;
+    object-fit: cover;
+  }
+
+  
+
+  .blue_content {
+    padding: 0 1.250rem;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+  }
+
+  .blue_content h2 {
+    font-size: var(--20px);
+    font-weight: 700;
+  }
+
+  .slide_contents {
+    position: absolute;
+    top: 20px;
+    /* left: -35%; */
+    display: flex;
+    gap: 16px;
+    padding-top: 20px;
+  }
+
+  .slide_contents li {
+    border-radius: 10px;
+    text-align: center;
+  }
+  .slide_contents li:not(.active){
+    transform: scale(0.9);
+    opacity: .5;
+  }
+  .slide_contents li img{
+    width: 160px;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(4, 56, 103, 0.20);
+  }
+  .slide_contents li h3 {
+    color: var(--darkgray);
+    font-size: var(--14px);
+    font-weight: 400;
+    word-break: keep-all;
+  }
+
+  .slide_contents li h2 {
+    font-size: var(--16px);
+    font-weight: 700;
+    padding: 8px 0 4px;
+    word-break: keep-all;
+  }
+
+  .slide_bar {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 0 1.250rem;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .slide_bar span{
+    width: 100%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--midgray);
+  }
+  .slide_bar span.active{
+    background-color: var(--main-blue);
+  }
+
+
+  .contentsBox {
+    padding: 0 20px;
+    padding: 0 1.250rem;
+  }
+
+
+  /* 콘텐츠 박스 */
+  .tabContents {
+    padding: 50px 0 20px;
+  }
+
+  .total {
+    font-size: var(--14px);
+    font-weight: 500;
+  }
+
+  .total b {
+    color: var(--main-red);
+    font-weight: 500;
+  }
+
+  .contents {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 18px;
+    padding: 10px 0 0;
+  }
+
+  .conImgBox {
+    position: relative;
+    color: #fff;
+    font-size: var(--14px);
+    width: 100%;
+  }
+
+  .conImgBox p {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    padding: 2px 10px;
+    border-radius: 10px 2px;
+    background-color: var(--main-red);
+  }
+
+  .place {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: 500;
+    width: 88%;
+    display: flex;
+    gap: 3px;
+  }
+
+  .place img {
+    width: 12px;
+    height: 14px;
+    object-fit: contain;
+    margin-top: 2px;
+  }
+
+  .place span {
+    width: 100%;
+  }
+
+  .conImg {
+    height: 162px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  .conImg img {
+    height: 162px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .conImg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
+  }
+
+  .conTitle {
+    font-size: var(--16px);
+    font-weight: 600;
+    padding: 8px 0 4px 5px;
+  }
+
+  .reaction {
+    display: flex;
+    gap: 10px;
+    color: var(--darkgray);
+  }
+
+  .reaction p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reaction span {
+    font-size: var(--12px);
+  }
+
+  .reaction p i {
+    font-size: var(--14px);
+    margin-right: 2px;
+  }
+
+  .reaction p:nth-child(1) i {
+    font-size: 18px;
+    margin-top: -3px;
+    font-weight: 300;
+    margin-right: 0px;
+  }
+
+
+  .page {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 60px;
+    color: var(--darkgray);
+    font-weight: 400;
+  }
+
+  .page span:nth-of-type(1) {
+    color: var(--black);
+    font-weight: 800;
+  }
+
+  .page i {
+    font-size: var(--22px);
+    font-weight: 300;
+  }
+}
