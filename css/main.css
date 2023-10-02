@@ -379,6 +379,9 @@ body{
     border-bottom: 1px solid var(--lightgray);
     display: flex;
   }
+  .att-article:nth-of-type(3) {
+    border-bottom: none;
+  }
   .att-img {
     flex: 2;
     display: inline-block;        
