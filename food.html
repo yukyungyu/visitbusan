@@ -24,12 +24,16 @@
       음식
     </h1>
     <p class="location">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <path
-          d="M4.91185 9.45962V6.75773H7.08574V9.45962C7.08574 9.75683 7.3303 10 7.62922 10H9.25964C9.55855 10 9.80311 9.75683 9.80311 9.45962V5.67697H10.727C10.977 5.67697 11.0966 5.36896 10.9064 5.20684L6.36292 1.1378C6.1564 0.954068 5.84119 0.954068 5.63467 1.1378L1.09122 5.20684C0.906442 5.36896 1.02057 5.67697 1.27057 5.67697H2.19448V9.45962C2.19448 9.75683 2.43904 10 2.73795 10H4.36837C4.66728 10 4.91185 9.75683 4.91185 9.45962Z"
-          fill="#767676" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M4.91185 9.45962V6.75773H7.08574V9.45962C7.08574 9.75683 7.3303 10 7.62922 10H9.25964C9.55855 10 9.80311 9.75683 9.80311 9.45962V5.67697H10.727C10.977 5.67697 11.0966 5.36896 10.9064 5.20684L6.36292 1.1378C6.1564 0.954068 5.84119 0.954068 5.63467 1.1378L1.09122 5.20684C0.906442 5.36896 1.02057 5.67697 1.27057 5.67697H2.19448V9.45962C2.19448 9.75683 2.43904 10 2.73795 10H4.36837C4.66728 10 4.91185 9.75683 4.91185 9.45962Z" fill="#767676"/>
       </svg>
-      부산에 가면&nbsp;>&nbsp;음식
+      <span>부산에가면&nbsp;&gt;&nbsp;</span>
+      <select name="lockNm" class="pg_loc">
+        <!-- value는 페이지이름과 동일 -->
+        <option value="food" selected>음식</option>
+        <option value="attraction">명소</option>
+        <option value="festival">축제</option>
+      </select>
     </p>
   </section>
   <!-- Contents Start (Section)-->
@@ -1127,54 +1131,48 @@
   <!-- tabBar -->
   <div class="dockbar">
     <ul class="bottom_menu">
-      <li><a href="index.html">
-          <img src="images/icons/home.png" alt="홈">
-          <span>홈</span>
-        </a></li>
+      <li><a href="main.html">
+        <img src="images/icons/home.png" alt="홈">
+        <span>홈</span>
+      </a></li>
       <li><a href="search.html">
-          <img src="images/icons/search.png" alt="검색">
-          <span>검색</span>
-        </a></li>
+        <img src="images/icons/search.png" alt="검색">
+        <span>검색</span>
+      </a></li>
       <li class="menu"><a href="#none">
-          <img src="images/icons/menu.png" alt="메뉴">
-          <span>메뉴</span>
-        </a></li>
+        <img src="images/icons/menu.png" alt="메뉴">
+        <span>메뉴</span>
+      </a></li>
       <li><a href="login.html">
-          <img src="images/icons/person.png" alt="마이홈">
-          <span>마이홈</span>
-        </a></li>
+        <img src="images/icons/person.png" alt="마이홈">
+        <span>마이홈</span>
+      </a></li>
     </ul>
   </div>
 
   <!-- menu -->
   <div class="menu_in">
-    <div class="logo"><img src="images/logo/logo_3x.png" alt="로고"></div>
+    <div class="logo"><a href="main.html"><img src="images/logo/logo_3x.png" alt="로고"></a></div>
     <div class="close"><span class="material-symbols-outlined">close</span></div>
     <ul class="gnb">
-      <li class="gnb_in">
-        <div class="gnb_menu"><a href="#none">부산에 가면</a>
-          <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div>
-        </div>
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">부산에 가면</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
         <ul class="sub">
           <li><a href="attraction.html">명소</a></li>
           <li><a href="festival.html">축제</a></li>
           <li><a href="food.html">음식</a></li>
         </ul>
       </li>
-      <li class="gnb_in">
-        <div class="gnb_menu"><a href="#none">추천여행</a>
-          <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div>
-        </div>
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">추천여행</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
         <ul class="sub">
           <li><a href="schedule.html">일정여행</a></li>
           <li><a href="theme.html">테마여행</a></li>
           <li><a href="activity.html">체험해양</a></li>
         </ul>
       </li>
-      <li class="gnb_in">
-        <div class="gnb_menu"><a href="#none">여행준비</a>
-          <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div>
-        </div>
+      <li class="gnb_in"><div class="gnb_menu"><a href="#none">여행준비</a>
+        <div class="plus"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></div></div>
         <ul class="sub">
           <li><a href="traffic.html">교통정보</a></li>
           <li><a href="emergency.html">응급의료서비스</a></li>
@@ -1190,13 +1188,10 @@
         </ul>
       </li>
     </ul>
-    <ul class="util">
-      <li><a href="https://www.youtube.com/BTOrganization" target="_blank"><i class="fas fa-brands fa-youtube"></i></a>
-      </li>
-      <li><a href="https://www.instagram.com/visitbusan.kr" target="_blank"><i
-            class="fas fa-brands fa-instagram"></i></a></li>
-      <li><a href="https://www.facebook.com/visitbusan.kr" target="_blank"><i
-            class="fas fa-brands fa-facebook-f"></i></a></li>
+    <ul class="util"> 
+      <li><a href="https://www.youtube.com/BTOrganization" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://www.instagram.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/visitbusan.kr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
     </ul>
   </div>
 
@@ -1208,6 +1203,11 @@
   <script src="js/menu.js"></script>
   <script>
     $(document).ready(function () {
+
+      //로케이션 이동
+      $('.pg_loc').change(function() {
+        location.href = $(this).val() + '.html';
+      });
 
       /* 탭메뉴 */
       $(".tab_menu li").click(function(){
