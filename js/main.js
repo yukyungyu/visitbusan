@@ -23,7 +23,7 @@ $(document).ready(function() {
     if (weather == 'Clear') {
       weather_icon = 'Sun';
       weather_description = '맑음';
-    } else if (weather == 'Clear') {
+    } else if (weather == 'Clouds') {
       weather_icon = 'Cloud';
       weather_description = '구름';
     } else if (weather == 'Rain') {
