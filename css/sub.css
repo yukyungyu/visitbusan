@@ -117,7 +117,7 @@ body{
   }
   .location span {
     font-size: 12px;
-    font-size: var(--12ox);
+    font-size: var(--12px);
     font-weight: 400;
     color: #767676;
   }
@@ -138,7 +138,6 @@ body{
     font-size: 0.750rem;
     font-weight: 400;
   }
-
 
   /* ______Footer______ */
   footer{
