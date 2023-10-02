@@ -87,6 +87,39 @@
   .contet_start h3{font-size: var(--14px)}
   .contet_start h3 span{color: var(--red);}
 
+  .location {
+    vertical-align: middle;
+    padding: 10px 20px;
+    padding: 0.625rem 1.250rem;
+    
+  }
+  .location svg {
+    vertical-align: middle;
+  }
+  .location span {
+    font-size: 12px;
+    font-size: var(--12px);
+    font-weight: 400;
+    color: #767676;
+  }
+  .pg_loc {
+    font-family: 'SUIT';
+    letter-spacing: -0.5px;
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+    color: #767676;
+    border: 0 none;
+    outline: 0 none;
+    border-radius:0;
+    background-color: #fff;
+  }
+  .pg_loc option {
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+  }
+
   .align{
     display: flex;
     justify-content: space-between;

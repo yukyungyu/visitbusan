@@ -24,21 +24,26 @@
       여행공유
     </h1>
     <p class="location">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
         <path d="M4.91185 9.45962V6.75773H7.08574V9.45962C7.08574 9.75683 7.3303 10 7.62922 10H9.25964C9.55855 10 9.80311 9.75683 9.80311 9.45962V5.67697H10.727C10.977 5.67697 11.0966 5.36896 10.9064 5.20684L6.36292 1.1378C6.1564 0.954068 5.84119 0.954068 5.63467 1.1378L1.09122 5.20684C0.906442 5.36896 1.02057 5.67697 1.27057 5.67697H2.19448V9.45962C2.19448 9.75683 2.43904 10 2.73795 10H4.36837C4.66728 10 4.91185 9.75683 4.91185 9.45962Z" fill="#767676"/>
       </svg>
-      유용한정보&nbsp;&gt;&nbsp;여행공유
+      <span>유용한정보&nbsp;&gt;&nbsp;</span>
+      <select name="lockNm" class="pg_loc">
+        <option value="sharePic" selected>여행공유</option>
+        <option value="notice">공지사항</option>
+        <option value="performance">공연&행사</option>
+      </select>
     </p>
   </section>
   <!-- Contents Start (Section)-->
   <section class="share-content">
     <div class="tab">
-      <span data-alt="tab-photo">사진</span>
-      <span data-alt="tab-review" class="active">리뷰</span>
+      <span data-alt="tab-photo" class="active">사진</span>
+      <span data-alt="tab-review">리뷰</span>
     </div>
     <!-- 사진 tab -->
-    <div class="tab-contents" id="tab-photo">
-      <div class="total">총(전체) 1,513건</div>
+    <div class="tab-contents active" id="tab-photo">
+      <h3 class="total">총(전체) <span>1,513건</span></h3>
       <div class="cont-box">
         <div class="photo-info">
           <div class="photo-user-info">
@@ -116,20 +121,16 @@
       </div>
 
       <!-- 페이징 -->
-      <div class="paging">
-        <span class="material-symbols-outlined arrow-left">
-          chevron_left
-        </span>
-        <span class="pg-num"> 1  2  3  4  5 / 100 </span>
-        <span class="material-symbols-outlined arrow-right">
-          chevron_right
-          </span>
+      <div class="page">
+        <i class="material-symbols-outlined">chevron_left</i>
+        <span>1</span><span>/</span><span>100</span>
+        <i class="material-symbols-outlined">chevron_right</i>
       </div>
       <button class="reg-btn">등록하기</button>
     </div>
     <!-- 리뷰 tab -->
-    <div class="tab-contents active" id="tab-review">
-      <div class="total">총(전체) 3,137건</div>
+    <div class="tab-contents" id="tab-review">
+      <h3 class="total">총(전체) <span>3,137건</span></h3>
       <div class="cont-box">
         <div class="review-info">
           <span class="r-user-photo">
@@ -224,14 +225,10 @@
         </div>
       </div>
       <!-- 페이징 -->
-      <div class="paging">
-        <span class="material-symbols-outlined arrow-left">
-          chevron_left
-        </span>
-        <span class="pg-num"> 1  2  3  4  5 / 100 </span>
-        <span class="material-symbols-outlined arrow-right">
-          chevron_right
-          </span>
+      <div class="page">
+        <i class="material-symbols-outlined">chevron_left</i>
+        <span>1</span><span>/</span><span>100</span>
+        <i class="material-symbols-outlined">chevron_right</i>
       </div>
       <button class="reg-btn">등록하기</button>
     </div>
@@ -319,9 +316,6 @@
   <div id="popup"> <!--popup_box-->
     <div class="pop_body clear">
       <ul class="pop">
-        <li></li>
-        <li></li>
-        <li></li>
       </ul>
       
       <!-- 버튼(좌우+close) -->
@@ -335,7 +329,9 @@
         <li class="right_btn">
           <i class="material-icons">keyboard_arrow_right</i>
         </li>
-        <li class="g_page"><span>1</span> / <span>15</span></li>
+        <li class="g_page">
+          <span class="nIndex">1</span> / <span class="tot_pg"></span>
+        </li>
       </ul>
     </div>			
   </div>
@@ -345,6 +341,11 @@
   <script src="js/jquery-3.7.0.min.js"></script>
   <script src="js/menu.js"></script>
   <script>
+    //로케이션 이동
+    $('.pg_loc').change(function() {
+      location.href = $(this).val() + '.html';
+    });
+
     $('.tab span').click(function() {
       let tabName = $(this).attr('data-alt');
 
@@ -356,18 +357,52 @@
     });
 
     $('.img-box').click(function(){
-      let parent = $(this).parent()[0].className;
-      console.log(parent);
-      let img_cnt =  $('.'+parent).children().length;
-      console.log(img_cnt);
-      g_pop=$(this).index();
-      console.log(`g_pop: ${g_pop}`);
+      //photo-1, photo-2...
+      let parent = $(this).parent();
+      //현 컨텐츠의 이미지 개수
+      let img_cnt = $(this).parent().children().length;
+      //현 컨텐츠의 이미지들(img)
+      let pr_ch = $(this).parent().children().find('img');
+      g_pop = $(this).index();
+      
+      $("html").css({overflowY:"hidden"});
+      $("#popup").stop().fadeIn(200);
+      $(".nIndex").text(g_pop+1);
+      $(".tot_pg").text(img_cnt);
 
-      $(".g_page span:nth-child(1)").text(g_pop+1);  //오른쪽 상단 페이지번호
-      $("html").css({overflowY:"hidden"}); //기존 html 스크롤 숨기기
-      $(".pop>li").eq(g_pop).show();  //각 목록의 내용
-      $("#popup").stop().fadeIn(); //검정배경
+      for(let i=0; i<img_cnt; i++) {
+        $('.pop').append(`<li index="${i}"><img src="${pr_ch[i].currentSrc}" alt="이미지"></li>`);
+      }
+      $(".pop>li").eq(g_pop).show(); //현재 인덱스 이미지
+
+      $('.left_btn').click(function(e){
+        if(g_pop > 0){
+          $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
+          g_pop--;
+          $(".nIndex").text(g_pop+1);
+          $(".pop>li").eq(g_pop).stop().fadeIn();
+        }
+      });
+  
+      $('.right_btn').click(function(e){
+        if(g_pop < img_cnt-1){
+          $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
+          g_pop++;
+          $(".nIndex").text(g_pop+1);
+          $(".pop>li").eq(g_pop).stop().fadeIn();
+        }
+      });
+
+      //close 클릭하면
+      $('.btn_close').click(function() {
+        $("html").css({"overflow-y":"scroll"});
+        $(".pop>li").stop().hide();
+        $('#popup').stop().fadeOut(200);
+        $('.pop').html(''); //초기화
+      });
     });
+
+    
   </script>
 </body>
 </html>

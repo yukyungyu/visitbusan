@@ -90,18 +90,36 @@ body{
   }
 
   .location {
-    /* line-height: 12px;
-    line-height: 0.750rem; */
     vertical-align: middle;
     padding: 10px 20px;
     padding: 0.625rem 1.250rem;
+    
+  }
+  .location svg {
+    vertical-align: middle;
+  }
+  .location span {
+    font-size: 12px;
+    font-size: var(--12px);
+    font-weight: 400;
+    color: #767676;
+  }
+  .pg_loc {
+    font-family: 'SUIT';
+    letter-spacing: -0.5px;
     font-size: 12px;
     font-size: 0.750rem;
     font-weight: 400;
     color: #767676;
+    border: 0 none;
+    outline: 0 none;
+    border-radius:0;
+    background-color: #fff;
   }
-  .location svg {
-    vertical-align: middle;
+  .pg_loc option {
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
   }
 
 
@@ -331,7 +349,7 @@ body{
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
     row-gap: 18px;
-    padding: 10px 0 28px;
+    padding: 10px 0 0;
   }
 
   .conImgBox{
@@ -363,7 +381,10 @@ body{
     object-fit: contain;
     margin-top: 2px;
   }
-  .place span{width: 100%;}
+  .place span{
+    width: 100%;
+    word-break: keep-all;
+  }
 
   .conImg{
     height: 162px;
@@ -416,5 +437,24 @@ body{
     margin-top: -3px;
     font-weight: 300;
     margin-right: 0px;
+  }
+
+  /* 페이지번호 */
+  .page{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 60px;
+    color: var(--darkgray);
+    font-weight: 400;
+  }
+  .page span:nth-of-type(1){
+    color: var(--black);
+    font-weight: 800;
+  }
+  .page i{
+    font-size: var(--22px);font-weight: 300;
+    padding: 0 28px;
   }
 }

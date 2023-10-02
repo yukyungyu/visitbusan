@@ -1,0 +1,343 @@
+@import url(common.css);
+@import url(../fonts/SUIT-woff2/SUIT.css);
+
+/* color palette */
+:root {
+  --main-navy: #132644;
+  /* rgba(19, 38, 68); */
+  --main-blue: #1645D3;
+  /* rgba(22, 69, 211); */
+  --main-red: #FF414D;
+  /* rgba(255, 56, 77); */
+  --main-sky: #D9ECF2;
+  /* rgba(271, 236, 241); */
+  --main-lightsky: #D9ECF2;
+  /* rgba(271, 236, 241, 0.6); */
+
+  /* 글자색 */
+  --black: #191919;
+  /* rgba(25, 25, 25); */
+  --darkgray: #767676;
+  /* rgba(118, 118, 118); */
+  --midgray: #D9D9D9;
+  /* rgba(217, 217, 217); */
+  --lightgray: #EEEEEE;
+  /*  rgba(238, 238, 238); */
+  --bluegray: #F1F1F5;
+  /* rgba(241, 241, 241); */
+
+  /* 폰트 사이즈 정리 */
+  --24px: 1.500rem;
+  --22px: 1.375rem;
+  --20px: 1.250rem;
+  --16px: 1.000rem;
+  --14px: 0.875rem;
+  --12px: 0.750rem;
+}
+
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: var(--black);
+}
+
+@media screen and (max-width:767px) {
+
+  /* ------------------- Default CSS ------------------- */
+  body {
+    font-family: 'SUIT';
+    position: relative;
+  }
+
+  section {
+    padding: 0 20px;
+    padding: 0 1.250rem;
+  }
+
+  /* ---------------------- Header ---------------------- */
+  header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .header-logo {
+    margin: 20px auto 0;
+    margin: 1.250rem auto 0;
+    width: 45px;
+    width: 2.813rem;
+    height: 30px;
+    height: 1.875rem;
+    transform: scale(1.2);
+    filter: invert(1);
+  }
+
+  /* ---------------------- Section:visual ---------------------- */
+  .main {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    position: relative;
+  }
+
+  .visual {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .page-title {
+    display: block;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-size: 1.750rem;
+    color: #fff;
+    font-weight: 700;
+    z-index: 5;
+  }
+
+  .location {
+    vertical-align: middle;
+    padding: 10px 20px;
+    padding: 0.625rem 1.250rem;
+    
+  }
+  .location svg {
+    vertical-align: middle;
+  }
+  .location span {
+    font-size: 12px;
+    font-size: var(--12px);
+    font-weight: 400;
+    color: #767676;
+  }
+  .pg_loc {
+    font-family: 'SUIT';
+    letter-spacing: -0.5px;
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+    color: #767676;
+    border: 0 none;
+    outline: 0 none;
+    border-radius:0;
+    background-color: #fff;
+  }
+  .pg_loc option {
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+  }
+
+
+  /* ______Footer______ */
+  footer {
+    width: 100%;
+    max-width: 767px;
+    margin: auto;
+    background-color: #132644;
+    color: #eee;
+    font-family: 'SUIT-Regular';
+    font-size: 0.625rem;
+    text-align: center;
+    line-height: 1.875rem;
+    padding-bottom: 4.500rem;
+  }
+
+  .foot_contents {
+    padding: 3.438rem 4.063rem;
+  }
+
+  .foot_menu,
+  .foot_info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .foot_info em {
+    font-style: normal;
+  }
+
+  /* #################### TabBar #################### */
+  .dockbar {
+    font-family: 'SUIT-Regular';
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 797px;
+    height: 4.500rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1.250rem 1.250rem 0 0;
+    box-sizing: border-box;
+    filter: drop-shadow(0px -2px 10px rgba(0, 0, 0, 0.15));
+    backdrop-filter: blur(10px);
+  }
+
+  .bottom_menu {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #767676;
+  }
+
+  .bottom_menu li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.750rem;
+  }
+
+  .bottom_menu li:hover {
+    color: #1645D3;
+  }
+
+  .bottom_menu li img {
+    width: 1.500rem;
+  }
+
+  /* ------------------- END ------------------- */
+
+  /* -------------- Contents Start (Section)-------------- */
+  
+
+
+  .contentsBox {
+    padding: 0 20px;
+    padding: 0 1.250rem;
+  }
+
+
+  /* 서치창 */
+  .search_box {
+    margin-top: -8%;
+    position: relative;
+    width: 100%;
+    padding: 1.250rem 0 1.875rem;
+    border-radius: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  select {
+    outline: none;
+    border: transparent;
+    border-bottom: 1px solid var(--midgray);
+    font-size: 0.875em;
+    color: var(--darkgray);
+  }
+
+  .search_box::before {
+    content: '';
+    position: absolute;
+    right: 2%;
+    top: 30%;
+    background: url(../images/icons/search.png) no-repeat center center;
+    background-size: cover;
+    width: 27px;
+    height: 27px;
+  }
+
+  .search_box input {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: transparent;
+    border-bottom: 1px solid var(--midgray);
+    background-color: transparent;
+    font-size: 0.875em;
+    text-indent: 3%;
+    border-radius: 0;
+  }
+
+  .search_box input::placeholder {
+    color: var(--darkgray);
+  }
+
+  .search_box input:focus::placeholder {
+    opacity: 0;
+  }
+
+  input::-ms-clear,
+  input::-ms-reveal {
+    display: none;
+  }
+
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button,
+  input::-webkit-search-results-button,
+  input::-webkit-search-results-decoration {
+    display: none;
+  }
+
+
+  /* 콘텐츠 박스 */
+  .tabContents {
+    padding: 20px 0;
+  }
+
+  .total {
+    font-size: var(--14px);
+    font-weight: 500;
+  }
+
+  .total b {
+    color: var(--main-red);
+    font-weight: 500;
+  }
+
+  /* 리스트 */
+  .notice_list{
+    padding: 20px 0;
+  }
+  .notice_list li{
+    padding: 12px 0;
+    border-bottom: 1px solid var(--midgray);
+  }
+  .notice_list li:nth-child(1){
+    border-top: 1px solid var(--midgray);
+  }
+  .notice_list li h2{
+    font-size: var(--16px);
+    font-weight: 600;
+    word-break: keep-all;
+    padding-bottom: 10px;
+  }
+  .notice_list li h3{
+    font-size: var(--14px);
+    font-weight: 400;
+    color: var(--darkgray);
+  }
+
+  /* 페이지번호 */
+  .page{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 60px;
+    color: var(--darkgray);
+    font-weight: 400;
+  }
+  .page span:nth-of-type(1){
+    color: var(--black);
+    font-weight: 800;
+  }
+  .page i{
+    font-size: var(--22px);font-weight: 300;
+    padding: 0 28px;
+  }
+}

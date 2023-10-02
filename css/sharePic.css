@@ -96,14 +96,36 @@ body{
     vertical-align: middle;
     padding: 10px 20px;
     padding: 0.625rem 1.250rem;
-    font-size: 12px;
-    font-size: 0.750rem;
-    font-weight: 400;
-    color: #767676;
+    
   }
   .location svg {
     vertical-align: middle;
   }
+  .location span {
+    font-size: 12px;
+    font-size: var(--12px);
+    font-weight: 400;
+    color: #767676;
+  }
+  .pg_loc {
+    font-family: 'SUIT';
+    letter-spacing: -0.5px;
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+    color: #767676;
+    border: 0 none;
+    outline: 0 none;
+    border-radius:0;
+    background-color: #fff;
+  }
+  .pg_loc option {
+    font-size: 12px;
+    font-size: 0.750rem;
+    font-weight: 400;
+  }
+
+
   /* ---------------------- Section:content  ---------------------- */
   .share-content {
     overflow: hidden;
@@ -132,18 +154,19 @@ body{
     display: block;
   }
   .total {
+    font-size: var(--14px);
     padding: 10px 0;
     padding: 0.625rem 0;
-    font-weight: var(--semibold);
     border-bottom: 1px solid var(--bluegray);
     margin-bottom: 20px;
   }
+  .total span {color: var(--main-red);}
   .cont-box {
     border-bottom: 1px solid var(--bluegray);
     margin-bottom: 20px;
   }
-  .cont-box:last-child {
-    border: none;
+  .cont-box:nth-of-type(3) {
+    border-bottom: none;
   }
   .photo-info {
     display: flex;
@@ -338,17 +361,23 @@ body{
     font-size: var(--12px);
     margin-bottom: 14px;
   }
-  .paging {
+  .page {
     margin: 50px auto 30px;
     display: flex;
+    gap: 8px;
     justify-content: center;
     align-items: center;
+    padding: 10px 0 60px;
+    color: var(--darkgray);
+    font-weight: 400;
   }
-  .arrow-left, .arrow-right {cursor: pointer;}
-  .pg-num {
-    display: inline-block;
-    height: 35px;
-    line-height: 35px;
+  .page span:nth-of-type(1){
+    color: var(--black);
+    font-weight: 800;
+  }
+  .page i{
+    font-size: var(--22px);font-weight: 300;
+    padding: 0 28px;
   }
   .reg-btn {
     display: block;
@@ -369,59 +398,65 @@ body{
   #popup{ /*검정배경*/
     display:none; 
     position:fixed; 
-    left:0; 
     top:0;
+    left:0; 
     width:100%; 
     height:100vh; 
     background:rgba(0,0,0,0.7); 
     z-index:1000;
     overflow-y:scroll; 
-    /*auto로 하면 스크롤바의 폭때문에 콘텐츠와 버튼사이의 간격이 생김->버튼위치맞춤*/
   }
-  /*각 목록별 나오는 모달팝업 내용 나오는 부분*/
-
   .pop_body{   /*팝업내용박스*/
-    position:relative;
+    position: relative;
+    width: 100%;
     height:100vh;	
-    margin:0 auto;
-    width:100%;
-    /* background:#fff; */
-    z-index:10000;
+    margin: 0 auto;
+    z-index: 1000;
+    border: 1px solid red;
   }
   .pop>li{
-    position:absolute;
-    width:100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
     text-align:center;
-    display:none;
+    display: none;
+  }
+  .pop>li>img {
+    width: 100%;
+    /* height: auto; */
+    height: 100%;
+    object-fit: cover;
   }
 
   /*버튼영역*/ 
   .m_btn{
-    position:fixed;
-    left:50%;
-    top:0px;
-    margin-left:492px;
-    width:30%;
-    height:30%;
-    color:#fff;
-    text-align:center;
-    overflow:hidden;
-    z-index:20000;
-    border: 1px solid red;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 20%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    z-index: 20000;
   }
   .m_btn>li{
     cursor:pointer;
     overflow:hidden;
-    background:#e29393;
+    background:rgba(0,0,0,0.6);
   }
-  .m_btn>li:hover{background:#de7575;}
+  .m_btn>li:hover{background:rgba(0,0,0,0.9);}
 
   /*닫기버튼*/
   .m_btn .btn_close{
-    height:70px;
-    width:80px;
-    cursor:pointer;
-    border-bottom:1px solid #ecc2c2;
+    width: 100%;
+    /* width: 80px; */
+    height: 70px;
+    cursor: pointer;
+    border-bottom:1px solid #eee;
   }
   .m_btn .btn_close i{  /*아이콘폰트*/
     position:relative;
@@ -430,22 +465,26 @@ body{
   }
 
   /*다음이전 버튼*/
-
-  .m_btn .left_btn, .m_btn .right_btn{float:left;}
-  .m_btn .left_btn i,.m_btn .right_btn i{ 
-    position:relative;
-    top:10px;
-    font-size:30px;	
-    width:40px;
-    height:50px;	
+  .m_btn .left_btn {
+    float: left;
+  }
+  .m_btn .left_btn i,
+  .m_btn .right_btn i {
+    position: relative;
+    top: 10px;
+    font-size: 30px;	
+    width: 50%;
+    height: 50px;
+    z-index: 20000;
   }
   .m_btn .g_page{  /*Page번호*/
     font-size:12px;
     color:#fff;
-    width:80px;
+    width: 100%;
     padding-top:10px;
     height:50px;
     text-align:center;
+    z-index:20000;
   }
 
 
