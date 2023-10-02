@@ -20,10 +20,16 @@
       일정여행
     </h1>
     <p class="location">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
         <path d="M4.91185 9.45962V6.75773H7.08574V9.45962C7.08574 9.75683 7.3303 10 7.62922 10H9.25964C9.55855 10 9.80311 9.75683 9.80311 9.45962V5.67697H10.727C10.977 5.67697 11.0966 5.36896 10.9064 5.20684L6.36292 1.1378C6.1564 0.954068 5.84119 0.954068 5.63467 1.1378L1.09122 5.20684C0.906442 5.36896 1.02057 5.67697 1.27057 5.67697H2.19448V9.45962C2.19448 9.75683 2.43904 10 2.73795 10H4.36837C4.66728 10 4.91185 9.75683 4.91185 9.45962Z" fill="#767676"/>
       </svg>
-      추천여행&nbsp;>&nbsp;일정여행
+      <span>추천여행&nbsp;&gt;&nbsp;</span>
+      <select name="lockNm" class="pg_loc">
+        <!-- value는 페이지이름과 동일 -->
+        <option value="schedule" selected>일정여행</option>
+        <option value="theme">테마여행</option>
+        <option value="activity">체험·해양</option>
+      </select>
     </p>
   </section>
   <!-- Contents Start (Section)-->
@@ -370,6 +376,12 @@
 
   <script src="js/jquery-3.7.0.min.js"></script>
   <script src="js/schedule.js"></script>
+  <script>
+    //로케이션 이동
+    $('.pg_loc').change(function() {
+      location.href = $(this).val() + '.html';
+    });
+  </script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/svg-with-js.min.css"></script>
   <script src="js/menu.js"></script>
 </body>
