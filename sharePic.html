@@ -316,9 +316,6 @@
   <div id="popup"> <!--popup_box-->
     <div class="pop_body clear">
       <ul class="pop">
-        <li></li>
-        <li></li>
-        <li></li>
       </ul>
       
       <!-- 버튼(좌우+close) -->
@@ -332,7 +329,9 @@
         <li class="right_btn">
           <i class="material-icons">keyboard_arrow_right</i>
         </li>
-        <li class="g_page"><span>1</span> / <span>15</span></li>
+        <li class="g_page">
+          <span class="nIndex">1</span> / <span class="tot_pg"></span>
+        </li>
       </ul>
     </div>			
   </div>
@@ -358,18 +357,52 @@
     });
 
     $('.img-box').click(function(){
-      let parent = $(this).parent()[0].className;
-      console.log(parent);
-      let img_cnt =  $('.'+parent).children().length;
-      console.log(img_cnt);
-      g_pop=$(this).index();
-      console.log(`g_pop: ${g_pop}`);
+      //photo-1, photo-2...
+      let parent = $(this).parent();
+      //현 컨텐츠의 이미지 개수
+      let img_cnt = $(this).parent().children().length;
+      //현 컨텐츠의 이미지들(img)
+      let pr_ch = $(this).parent().children().find('img');
+      g_pop = $(this).index();
+      
+      $("html").css({overflowY:"hidden"});
+      $("#popup").stop().fadeIn(200);
+      $(".nIndex").text(g_pop+1);
+      $(".tot_pg").text(img_cnt);
 
-      $(".g_page span:nth-child(1)").text(g_pop+1);  //오른쪽 상단 페이지번호
-      $("html").css({overflowY:"hidden"}); //기존 html 스크롤 숨기기
-      $(".pop>li").eq(g_pop).show();  //각 목록의 내용
-      $("#popup").stop().fadeIn(); //검정배경
+      for(let i=0; i<img_cnt; i++) {
+        $('.pop').append(`<li index="${i}"><img src="${pr_ch[i].currentSrc}" alt="이미지"></li>`);
+      }
+      $(".pop>li").eq(g_pop).show(); //현재 인덱스 이미지
+
+      $('.left_btn').click(function(e){
+        if(g_pop > 0){
+          $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
+          g_pop--;
+          $(".nIndex").text(g_pop+1);
+          $(".pop>li").eq(g_pop).stop().fadeIn();
+        }
+      });
+  
+      $('.right_btn').click(function(e){
+        if(g_pop < img_cnt-1){
+          $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
+          g_pop++;
+          $(".nIndex").text(g_pop+1);
+          $(".pop>li").eq(g_pop).stop().fadeIn();
+        }
+      });
+
+      //close 클릭하면
+      $('.btn_close').click(function() {
+        $("html").css({"overflow-y":"scroll"});
+        $(".pop>li").stop().hide();
+        $('#popup').stop().fadeOut(200);
+        $('.pop').html(''); //초기화
+      });
     });
+
+    
   </script>
 </body>
 </html>
