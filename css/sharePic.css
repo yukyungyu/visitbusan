@@ -412,7 +412,6 @@ body{
     height:100vh;	
     margin: 0 auto;
     z-index: 1000;
-    border: 1px solid red;
   }
   .pop>li{
     position: absolute;
@@ -468,12 +467,16 @@ body{
   .m_btn .left_btn {
     float: left;
   }
+  .m_btn .left_btn,
+  .m_btn .right_btn {
+    width: 50%;
+  }
   .m_btn .left_btn i,
   .m_btn .right_btn i {
     position: relative;
     top: 10px;
     font-size: 30px;	
-    width: 50%;
+    width: 40px;
     height: 50px;
     z-index: 20000;
   }
