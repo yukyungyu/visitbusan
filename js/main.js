@@ -90,12 +90,12 @@ $(document).ready(function() {
   //축제&이벤트
   const swiper2 = new Swiper('.fes-swiper', {
     slidesPerView: 2,
-    spaceBetween: 10,
+    // spaceBetween: 10,
     // autoplay: {
     //   delay: 2500,
     //   disableOnInteraction: true,
     // },
-    // loop: true
+    loop: true
   });
 
   //추천코스
