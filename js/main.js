@@ -21,28 +21,28 @@ $(document).ready(function() {
     let weather_icon; 
     let weather_description;
     if (weather == 'Clear') {
-      weather_icon = 'Sun';
+      weather_icon = 'sunny';
       weather_description = '맑음';
     } else if (weather == 'Clouds') {
-      weather_icon = 'Cloud';
+      weather_icon = 'cloud';
       weather_description = '구름';
     } else if (weather == 'Rain') {
-      weather_icon = 'Cloud mid rain';
+      weather_icon = 'rain';
       weather_description = '비';
     } else if (weather == 'Thunderstorm') {
-      weather_icon = 'Cloud 3 zap';
+      weather_icon = 'thunderstorm';
       weather_description = '천둥번개';
     } else if (weather == 'Drizzle') {
-      weather_icon = 'Cloud little rain';
+      weather_icon = 'drizzle';
       weather_description = '이슬비';
     } else if (weather == 'Snow') {
-      weather_icon = 'Big snow little snow';
+      weather_icon = 'snow';
       weather_description = '눈';
     } else if (weather == 'Atmosphere') {
-      weather_icon = 'Cloud';
+      weather_icon = 'fog';
       weather_description = '안개';
     }
-    let $url = `images/main/weather/` + weather_icon + '.png';
+    let $url = `images/main/weather2/` + weather_icon + '.png';
     $('.CurrIcon').append('<img class="weather-icon" src="' + $url +'" alt="날씨아이콘">');
     $('.weather_description').prepend(weather_description);
   };
