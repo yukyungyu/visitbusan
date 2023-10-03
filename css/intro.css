@@ -13,10 +13,14 @@ body {
 }
 /* _______________________________ Mobile (768이하) 기준 */
 @media screen and (max-width:767px) {
-.bg-box video {
+/* .bg-box video{
   width: 100%;
   height: 100%;
   object-fit: cover;
+} */
+.bg-box img {
+  width: 100%;
+  height: 100%;
 }
 .intro-text {
   font-family: 'SUIT-Regular';
