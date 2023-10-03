@@ -5,6 +5,8 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
+  background: url(../images/intro/intro.png) no-repeat center center;
+  background-size: cover;
 }
 .bg-box {
   width: 100%;
@@ -18,10 +20,6 @@ body {
   height: 100%;
   object-fit: cover;
 } */
-.bg-box img {
-  width: 100%;
-  height: 100%;
-}
 .intro-text {
   font-family: 'SUIT-Regular';
   font-weight: bold;
