@@ -238,6 +238,9 @@ body {
     border-bottom: 1px solid var(--midgray);
     font-size: 0.875em;
     color: var(--darkgray);
+    outline: 0 none;
+    border-radius:0;
+    background-color: #fff;
   }
 
   .search_box::before {
