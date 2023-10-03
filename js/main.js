@@ -57,7 +57,7 @@ $(document).ready(function() {
       changeIcon(weather_description);
 
       let $Icon = (data.weather[0].icon).substr(0,2);
-      let $Temp = Math.floor(data.main.temp) + 'º';
+      let $Temp = Math.floor(data.main.temp) + '˚';
       const $city = data.name;
       let $wind = data.wind.speed + ' m/s';
       let $humidity = data.main.humidity+ ' %';

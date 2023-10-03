@@ -228,9 +228,9 @@ body{
     padding: 1.250rem;
     overflow: hidden;
     background: url(../images/main/pattern.svg),
-    linear-gradient(120deg, #D9ECF2 0%, rgba(217, 236, 242, 0.20) 100%);
+    linear-gradient(180deg, #D9ECF2 0%, rgba(217, 236, 242, 0.20) 100%);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     border-radius: 10px;
   }
   .weather-box .weather-txt {
