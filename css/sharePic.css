@@ -192,7 +192,7 @@ body{
   .date {
     color: var(--darkgray);
   }
- 
+
   .text-box {
     color: var(--darkgray);
     font-weight: var(--medium);
@@ -311,7 +311,7 @@ body{
   .third{
     position: relative;
   }
-  .third::before {
+  /* .third::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -330,7 +330,7 @@ body{
     transform: translate(-50%, -50%);
     color: #fff;
     z-index: 15;
-  }
+  } */
 
 
 

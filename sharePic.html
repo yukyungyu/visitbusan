@@ -414,11 +414,14 @@
       //photo-1, photo-2...
       let parent = $(this).parent();
       //현 컨텐츠의 이미지 개수
-      let img_cnt = $(this).parent().children().length;
+      img_cnt = $(this).parent().children().length;
       //현 컨텐츠의 이미지들(img)
       let pr_ch = $(this).parent().children().find('img');
       g_pop = $(this).index();
       
+      // console.log(`img_cnt: ${img_cnt}`);
+      // console.log(`g_pop: ${g_pop}`);
+
       $("html").css({overflowY:"hidden"});
       $("#popup").stop().fadeIn(200);
       $(".nIndex").text(g_pop+1);
@@ -429,31 +432,35 @@
       }
       $(".pop>li").eq(g_pop).show(); //현재 인덱스 이미지
 
-      $('.left_btn').click(function(e){
-        if(g_pop > 0){
-          $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
-          g_pop--;
-          $(".nIndex").text(g_pop+1);
-          $(".pop>li").eq(g_pop).stop().fadeIn();
-        }
-      });
-  
-      $('.right_btn').click(function(e){
-        if(g_pop < img_cnt-1){
-          $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
-          g_pop++;
-          $(".nIndex").text(g_pop+1);
-          $(".pop>li").eq(g_pop).stop().fadeIn();
-        }
-      });
+    });
 
-      //close 클릭하면
-      $('.btn_close').click(function() {
-        $("html").css({"overflow-y":"scroll"});
-        $(".pop>li").stop().hide();
-        $('#popup').stop().fadeOut(200);
-        $('.pop').html(''); //초기화
-      });
+    $('.left_btn').click(function(e){
+      if(g_pop > 0){
+        $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
+        g_pop--;
+        $(".nIndex").text(g_pop+1);
+        $(".pop>li").eq(g_pop).stop().fadeIn();
+      }
+    });
+
+    $('.right_btn').click(function(e){
+      if(g_pop < img_cnt-1){
+        // console.log('yes');
+        // console.log(`g_pop:${g_pop}`);
+        $(".pop>li").eq(g_pop).stop().fadeOut(); //기존X
+        g_pop++;
+        $(".nIndex").text(g_pop+1);
+        $(".pop>li").eq(g_pop).stop().fadeIn();
+      }
+    });
+
+    //close 클릭하면
+    $('.btn_close').click(function() {
+      $("html").css({"overflow-y":"scroll"});
+      $(".pop>li").stop().hide();
+      $('#popup').stop().fadeOut(200);
+      $('.pop').html(''); //초기화
+      
     });
 
     
