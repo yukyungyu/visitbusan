@@ -30,16 +30,16 @@ $(document).ready(function(){
   });
   
 
-  $(".bottom_menu li").each(function(){
-    let nowImg = $(this).find("img");
-    let srcName = nowImg.attr("src");
-    let newSrc = srcName.substring(0, srcName.lastIndexOf('.'));
+  // $(".bottom_menu li").each(function(){
+  //   let nowImg = $(this).find("img");
+  //   let srcName = nowImg.attr("src");
+  //   let newSrc = srcName.substring(0, srcName.lastIndexOf('.'));
 
-    $(this).hover(function(){
-      nowImg.attr('src', newSrc + '_hover.' + /[^.]+$/.exec(srcName));
-    }, function(){
-      nowImg.attr('src', newSrc + '.' + /[^.]+$/.exec(srcName));
-    });
-  });
+  //   $(this).hover(function(){
+  //     nowImg.attr('src', newSrc + '_hover.' + /[^.]+$/.exec(srcName));
+  //   }, function(){
+  //     nowImg.attr('src', newSrc + '.' + /[^.]+$/.exec(srcName));
+  //   });
+  // });
 
 });
